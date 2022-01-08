@@ -1,0 +1,39 @@
+.wrapper {
+    display: flex;
+    padding: 10px 16px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dpContainer {
+    flex: 1;
+}
+
+.pictureWrapper {
+    width: 40px;
+    height: 40px;
+}
+
+.pictureWrapper img {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+
+.buttonContainer {
+    display: flex;
+    flex-basis: 50%;
+    justify-content: flex-end;
+}
+
+.statusButton {
+    flex-basis: 25%;
+}
+
+.messageButton {
+    flex-basis: 25%;
+}
+
+.optionsButton {
+    flex-basis: 15%;
+}
