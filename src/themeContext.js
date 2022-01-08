@@ -2,7 +2,8 @@ import React, { createContext, useState } from 'react';
 
 const themes = {
     light : {
-        headerColor: '#ededed'
+        headerColor: '#ededed',
+        headerColor2: '#f6f6f6'
     },
     dark: {
         headerColor: '#000'

@@ -8,7 +8,6 @@ import { ThemeContext } from '../../../themeContext';
 const SidebarHeader = props => {
 
     const { theme } = useContext(ThemeContext);
-    console.log(theme)
 
     return (
         <header className={styles.wrapper} style={{backgroundColor: theme.headerColor}}>
