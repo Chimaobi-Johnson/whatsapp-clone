@@ -7,7 +7,7 @@ const Searchbar = props => {
     const { theme } = useContext(ThemeContext);
 
     return (
-        <div className={styles.wrapper} style={{ backgroundColor: theme.headerColor2}}>
+        <div className={styles.wrapper} style={{ backgroundColor: theme.tertiaryColor }}>
             <div className={styles.inputContainer}>
                 <input placeholder="Search or start a new chat" className={styles.searchinput} type="search" /> 
                 <div className={styles.backIcon}>

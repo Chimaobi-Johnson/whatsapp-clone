@@ -7,6 +7,8 @@ import dpImage from '../../../images/43915093_734048600279905_791794158461707735
 
 const Contact = props => {
 
+    const { name } = props;
+
     const { theme } = useContext(ThemeContext)
 
     return (
@@ -16,8 +18,8 @@ const Contact = props => {
             </div>
             <div className={styles.detailsContainer}>
                 <div className={styles.nameContainer}>
-                   <h2>Chimaobi</h2> 
-                   <span>18:04</span>
+                   <h2>{name}</h2> 
+                   <span style={{ color: theme.textColor3 }}>18:04</span>
                 </div>
                 <div className={styles.textContainer}>
                     <p>Hi !!!!
