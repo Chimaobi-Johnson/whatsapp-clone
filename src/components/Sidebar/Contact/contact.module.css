@@ -1,9 +1,9 @@
 .wrapper {
-    background-color: aqua;
-    max-height: 72px;
+    min-height: 72px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-right: 15px;
 }
 
 .image {
@@ -13,23 +13,36 @@
 }
 
 .displayPictureContainer {
-    background-color: green;
     padding: 0 15px 0 13px;
 }
 
 .detailsContainer {
-    background-color: red;
     flex: 1;
 }
 
 .notificationContainer {
-    background-color: blue;
 } 
+
+.nameContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 .nameContainer h2 {
     margin: 0;
     padding: 0;
-    font-size: 1rem;
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+
+.nameContainer span {
+    font-size: .8rem;
+}
+
+.messageCount {
+    float: right;
+    display: none
 }
 
 .textContainer p {
