@@ -1,31 +1,34 @@
 .wrapper {
    height: 49px;
+   position: relative;
 }
 
 .inputContainer {
-    position: relative;
     margin-left: 40px;
 }
 
 .searchinput {
-    width: 80%;
+    width: 96%;
     height:35px;
     border-radius: 18px;
     outline: none;
     border: none;
-    padding-left: 10px;
-
+    padding-left: 15%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .searchIcon {
     position: absolute;
-    left: 1%;
-    top: 12%;
+    left: 3%;
+    top: 29%;
 }
 
 .backIcon {
     position: absolute;
-    left: 1%;
-    top: 12%;
+    left: 3%;
+    top: 29%;
     display: none;
 }

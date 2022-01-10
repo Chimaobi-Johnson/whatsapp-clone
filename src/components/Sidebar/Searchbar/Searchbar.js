@@ -9,7 +9,7 @@ const Searchbar = props => {
     return (
         <div className={styles.wrapper} style={{ backgroundColor: theme.headerColor2}}>
             <div className={styles.inputContainer}>
-                <input className={styles.searchinput} type="search" /> 
+                <input placeholder="Search or start a new chat" className={styles.searchinput} type="search" /> 
                 <div className={styles.backIcon}>
                 <span>
                         <svg viewBox="0 0 24 24" width="24" height="24" class="">
