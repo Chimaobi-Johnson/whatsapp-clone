@@ -1,0 +1,39 @@
+.wrapper {
+    background-color: aqua;
+    max-height: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.image {
+    height: 49px;
+    width: 49px;
+    border-radius: 50%;
+}
+
+.displayPictureContainer {
+    background-color: green;
+    padding: 0 15px 0 13px;
+}
+
+.detailsContainer {
+    background-color: red;
+    flex: 1;
+}
+
+.notificationContainer {
+    background-color: blue;
+} 
+
+.nameContainer h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+}
+
+.textContainer p {
+    margin: 0;
+    padding: 0;
+    font-size: .8rem;
+}

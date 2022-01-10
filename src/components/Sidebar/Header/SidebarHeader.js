@@ -10,7 +10,7 @@ const SidebarHeader = props => {
     const { theme } = useContext(ThemeContext);
 
     return (
-        <header className={styles.wrapper} style={{backgroundColor: theme.headerColor}}>
+        <div className={styles.wrapper} style={{backgroundColor: theme.headerColor}}>
             <div className={styles.dpContainer}>
                 <div className={styles.pictureWrapper}>
                     <img src={displayPicture} alt="dp" /> 
@@ -34,7 +34,7 @@ const SidebarHeader = props => {
                     </svg>
                 </div>
             </div>
-        </header>
+        </div>
     )
 }
 
