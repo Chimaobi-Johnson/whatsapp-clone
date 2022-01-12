@@ -1,11 +1,12 @@
 import React from 'react';
+import Landing from '../../components/Chat/Landing/Landing';
 import styles from './chatContainer.module.css';
 
 const ChatContainer = props => {
 
     return (
         <div className={styles.wrapper}>
-            <h1>CHAT CONTAINER</h1>
+            <Landing />
         </div>
     )
 }

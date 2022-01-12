@@ -64,6 +64,7 @@
     display: flex;
     align-items: center;
     margin-left: auto;
+    display: none;
 }
 
 .muteButton {

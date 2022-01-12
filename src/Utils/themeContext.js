@@ -5,7 +5,8 @@ const themes = {
         background: {
             primary: '#fff',
             secondary: '#ededed',
-            tertiary: '#f6f6f6'
+            tertiary: '#f6f6f6',
+            landing: '#f8f9fa'
         },
         text: {
             tertiary: '#9e9e9e'
