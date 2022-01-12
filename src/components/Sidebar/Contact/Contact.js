@@ -5,6 +5,8 @@ import styles from './contact.module.css';
 
 import dpImage from '../../../images/43915093_734048600279905_7917941584617077357_n(1).jpg';
 import Check from './ContactComponents/Check/Check';
+import OptionsButton from './ContactComponents/OptionsButton/OptionsButton';
+import MuteButton from './ContactComponents/MuteButton/MuteButton';
 
 const Contact = props => {
 
@@ -26,11 +28,18 @@ const Contact = props => {
                 </div>
                 <div className={styles.textContainer}>
                     <Check status={status} />             
-                    <p>Hi !!!
-                    <span className={styles.messageCount}> 
-                        2
-                    </span>
-                    </p>
+                    <p>Hi !!!</p>
+                    <div className={styles.statsContainer}>
+                    <div className={styles.muteButton}> 
+                            <MuteButton />
+                        </div>
+                        <div className={styles.messageCount}> 
+                            <span>1</span>
+                        </div>
+                        <div className={styles.optionsButton}> 
+                            <OptionsButton />
+                        </div>
+                    </div>
                 </div>
                 
             </div>

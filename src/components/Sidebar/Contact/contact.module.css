@@ -40,11 +40,6 @@
     font-size: .8rem;
 }
 
-.messageCount {
-    float: right;
-    display: none
-}
-
 .textContainer {
     align-items: flex-start;
     display: flex;
@@ -55,4 +50,32 @@
     padding: 0;
     padding-left: 2px;
     font-size: .8rem;
+}
+
+.statsContainer {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.muteButton {
+    margin-right: 5px;
+}
+
+.messageCount span {
+    border-top-right-radius: 1.1rem;
+    border-bottom-right-radius: 1.1rem;
+    border-bottom-left-radius: 1.1rem;
+    border-top-left-radius: 1.1rem;
+    font-size: .75rem;
+    color: #fff;
+    font-weight: 500;
+    padding: 0.4em 0.3em;
+    background-color: #06d755;
+    display: inline-block;
+    text-align: center;
+}
+
+.optionsButton {
+    display: none;
 }

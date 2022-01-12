@@ -31,7 +31,7 @@ const data = [
         {
             id: 444,
             time: '18:04',
-            status: 'seen', //delivered, seen,
+            status: 'delivered', //delivered, seen,
             text: 'Ok no wahala?',
             reply: [],
             to: 33333,
@@ -72,7 +72,7 @@ const data = [
         {
             id: 444,
             time: '18:04',
-            status: 'seen', //delivered, seen,
+            status: 'sent', //delivered, seen,
             text: 'Ok no wahala?',
             reply: [],
             to: 321,
@@ -102,7 +102,7 @@ const data = [
             {
                 id: 444,
                 time: '18:04',
-                status: 'seen', //delivered, seen,
+                status: 'sent', //delivered, seen,
                 text: 'voice note',
                 reply: [],
                 to: 321,
@@ -206,7 +206,7 @@ const data = [
             {
                 id: 444,
                 time: '18:04',
-                status: 'seen', //delivered, seen,
+                status: 'delivered', //delivered, seen,
                 text: 'Ok no wahala?',
                 reply: [],
                 to: 321,
