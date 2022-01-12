@@ -2,10 +2,17 @@ import React, { createContext, useState } from 'react';
 
 const themes = {
     light : {
-        secondaryColor: '#ededed',
-        tertiaryColor: '#f6f6f6',
-        primaryColor: '#fff',
-        textColor3: '#9e9e9e'
+        background: {
+            primary: '#fff',
+            secondary: '#ededed',
+            tertiary: '#f6f6f6'
+        },
+        text: {
+            tertiary: '#9e9e9e'
+        },
+        notification: {
+            primary: '#59c7f7'
+        }
     },
     dark: {
         headerColor: '#000'

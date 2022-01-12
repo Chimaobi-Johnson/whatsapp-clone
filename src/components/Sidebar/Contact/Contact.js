@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { ThemeContext } from '../../../themeContext'; 
+import { ThemeContext } from '../../../Utils/themeContext'; 
 
 import styles from './contact.module.css';
 
@@ -12,16 +12,18 @@ const Contact = props => {
     const { theme } = useContext(ThemeContext)
 
     return (
-        <div className={styles.wrapper} style={{ backgroundColor: theme.primaryColor }}>
+        <div className={styles.wrapper} style={{ backgroundColor: theme.background.tertiary }}>
             <div className={styles.displayPictureContainer}>
                 <img src={dpImage} alt="" className={styles.image} />
             </div>
             <div className={styles.detailsContainer}>
                 <div className={styles.nameContainer}>
                    <h2>{name}</h2> 
-                   <span style={{ color: theme.textColor3 }}>18:04</span>
+                   <span style={{ color: theme.text.tertiary }}>18:04</span>
                 </div>
                 <div className={styles.textContainer}>
+
+             
                     <p>Hi !!!!
                     <span className={styles.messageCount}> 
                         2

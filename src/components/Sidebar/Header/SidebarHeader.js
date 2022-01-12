@@ -3,14 +3,14 @@ import MessageSVG from '../../SVG/message.svg';
 import displayPicture from '../../../images/whatsapp-image.jpeg';
 
 import styles from './SidebarHeader.module.css';
-import { ThemeContext } from '../../../themeContext'; 
+import { ThemeContext } from '../../../Utils/themeContext'; 
 
 const SidebarHeader = props => {
 
     const { theme } = useContext(ThemeContext);
 
     return (
-        <div className={styles.wrapper} style={{backgroundColor: theme.secondaryColor}}>
+        <div className={styles.wrapper} style={{backgroundColor: theme.background.secondary}}>
             <div className={styles.dpContainer}>
                 <div className={styles.pictureWrapper}>
                     <img src={displayPicture} alt="dp" /> 

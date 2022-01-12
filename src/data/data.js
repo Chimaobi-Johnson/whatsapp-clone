@@ -106,7 +106,8 @@ const data = [
                 text: 'voice note',
                 reply: [],
                 to: 321,
-                replyTo: 112
+                replyTo: 112,
+                type: 'voice',
             }
         ]
     },
@@ -166,7 +167,8 @@ const data = [
                 text: 'missed call',
                 reply: [],
                 to: 321,
-                replyTo: 112
+                replyTo: 112,
+                type: 'missedcall'
             }
         ]
     },

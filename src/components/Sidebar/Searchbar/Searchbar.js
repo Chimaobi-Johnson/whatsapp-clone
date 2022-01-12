@@ -1,13 +1,13 @@
 import React, { useContext } from 'react';
 import styles from './Searchbar.module.css';
-import { ThemeContext } from '../../../themeContext'; 
+import { ThemeContext } from '../../../Utils/themeContext'; 
 
 const Searchbar = props => {
 
     const { theme } = useContext(ThemeContext);
 
     return (
-        <div className={styles.wrapper} style={{ backgroundColor: theme.tertiaryColor }}>
+        <div className={styles.wrapper} style={{ backgroundColor: theme.background.tertiary }}>
             <div className={styles.inputContainer}>
                 <input placeholder="Search or start a new chat" className={styles.searchinput} type="search" /> 
                 <div className={styles.backIcon}>

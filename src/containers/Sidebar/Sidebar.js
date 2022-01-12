@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import Contact from '../../components/Sidebar/Contact/Contact';
 import SidebarHeader from '../../components/Sidebar/Header/SidebarHeader';
 import Searchbar from '../../components/Sidebar/Searchbar/Searchbar';
-import { ThemeContext } from '../../themeContext';
+import { ThemeContext } from '../../Utils/themeContext';
 import data from '../../data/data';
 
 import styles from './sidebar.module.css';
@@ -13,7 +13,7 @@ const Sidebar = props => {
     const { theme } = useContext(ThemeContext);
 
     return (
-        <div className={styles.wrapper} style={{ backgroundColor: theme.tertiaryColor }}>
+        <div className={styles.wrapper} style={{ backgroundColor: theme.background.tertiary }}>
             <header style={styles.header}>
                 <SidebarHeader />
                 <Searchbar />
