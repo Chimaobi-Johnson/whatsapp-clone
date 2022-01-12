@@ -4,10 +4,13 @@ import { ThemeContext } from '../../../Utils/themeContext';
 import styles from './contact.module.css';
 
 import dpImage from '../../../images/43915093_734048600279905_7917941584617077357_n(1).jpg';
+import Check from './ContactComponents/Check/Check';
 
 const Contact = props => {
 
-    const { name } = props;
+    const { name, status } = props;
+
+    console.log(status)
 
     const { theme } = useContext(ThemeContext)
 
@@ -22,9 +25,8 @@ const Contact = props => {
                    <span style={{ color: theme.text.tertiary }}>18:04</span>
                 </div>
                 <div className={styles.textContainer}>
-
-             
-                    <p>Hi !!!!
+                    <Check status={status} />             
+                    <p>Hi !!!
                     <span className={styles.messageCount}> 
                         2
                     </span>

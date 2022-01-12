@@ -45,8 +45,14 @@
     display: none
 }
 
+.textContainer {
+    align-items: flex-start;
+    display: flex;
+}
+
 .textContainer p {
     margin: 0;
     padding: 0;
+    padding-left: 2px;
     font-size: .8rem;
 }

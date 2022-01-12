@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import Contact from '../../components/Sidebar/Contact/Contact';
 import SidebarHeader from '../../components/Sidebar/Header/SidebarHeader';
 import Searchbar from '../../components/Sidebar/Searchbar/Searchbar';
@@ -12,6 +12,16 @@ const Sidebar = props => {
    
     const { theme } = useContext(ThemeContext);
 
+    const [lastMessage, setLastMessage] = useState('')
+
+    const getMessageStatus = (messages) => {
+        if(messages.length !== 0) { // check if there is any existing message
+            return messages[messages.length - 1].status // take last item in array and get status
+        } else {
+            setLastMessage('Start a new conservation')
+        }
+    }
+
     return (
         <div className={styles.wrapper} style={{ backgroundColor: theme.background.tertiary }}>
             <header style={styles.header}>
@@ -21,7 +31,9 @@ const Sidebar = props => {
             <div className={styles.contactContainer}>
                 {data.map(item => {
                     return <Contact
+                        key={Math.floor(Math.random() * 2000)}
                         name={item.name}
+                        status={getMessageStatus(item.messages)}
                     />
                 })}
             </div>
