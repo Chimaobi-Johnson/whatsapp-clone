@@ -17,7 +17,7 @@ const Contact = props => {
     const { theme } = useContext(ThemeContext)
 
     return (
-        <div className={styles.wrapper} style={{ backgroundColor: theme.background.tertiary }}>
+        <div className={styles.wrapper} style={{ backgroundColor: theme.background.primary }}>
             <div className={styles.displayPictureContainer}>
                 <img src={dpImage} alt="" className={styles.image} />
             </div>
