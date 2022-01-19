@@ -8,6 +8,9 @@ const ChatBox = props => {
     return (
         <div className={styles.wrapper}>
             <ChatBoxHeader />
+            <div className={styles.chatContentBox}>
+
+            </div>
         </div>
     )
 }
