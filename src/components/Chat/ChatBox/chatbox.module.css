@@ -5,3 +5,7 @@
     flex-direction: column;
     justify-content: space-between;
 }
+
+.chatContentBox {
+    padding: 0 4rem;
+}

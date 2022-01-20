@@ -1,4 +1,5 @@
 import React from 'react';
+import BubbleLeft from '../../Messages/BubbleLeft/BubbleLeft';
 import InputContainer from '../Footer/InputContainer/InputContainer';
 import ChatBoxHeader from '../Header/ChatBoxHeader';
 
@@ -10,7 +11,8 @@ const ChatBox = props => {
         <div className={styles.wrapper}>
             <ChatBoxHeader />
             <div className={styles.chatContentBox}>
-                content
+                {/* <div className={styles.leftChat} */}
+                <BubbleLeft />
             </div>
             <InputContainer />
         </div>
