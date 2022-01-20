@@ -9,3 +9,15 @@
 .chatContentBox {
     padding: 0 4rem;
 }
+
+.leftChat {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.rightChat {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}

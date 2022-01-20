@@ -2,12 +2,13 @@
     font-size: 14px;
     padding: 6px 7px 8px 9px;
     display: block;
-    float: right;
+    /* float: right; */
     width: fit-content;
     max-width: 70%;
     position: relative;
     box-shadow: 0 1px .5px #c4c4c4;
     border-radius: 7.5px;
+    margin-bottom: 2px;
 }
 
 .wrapper::before {
@@ -24,13 +25,17 @@
   }
 
 .time {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     color: #c4c4c4;
     position: absolute;
     bottom: 3px;
     right: 5px;
     display: flex;
     align-items: center;
+}
+
+.time span {
+    margin-right: 3px;
 }
 
 .textWrapper {

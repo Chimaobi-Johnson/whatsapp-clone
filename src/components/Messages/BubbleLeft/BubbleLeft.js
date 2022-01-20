@@ -9,7 +9,7 @@ const BubbleLeft = props => {
     const { theme } = useContext(ThemeContext);
 
     return (
-        <div className={styles.wrapper} style={{ backgroundColor: theme.chat.background.primary, marginBottom: '12px' }}>
+        <div className={styles.wrapper} style={{ backgroundColor: theme.chat.background.primary }}>
                 <div className={styles.textWrapper}>
                     <span>I wanted to ask you guys about the gas bill</span>
                 </div>

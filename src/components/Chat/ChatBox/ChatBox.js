@@ -12,9 +12,15 @@ const ChatBox = props => {
         <div className={styles.wrapper}>
             <ChatBoxHeader />
             <div className={styles.chatContentBox}>
-                {/* <div className={styles.leftChat} */}
-                <BubbleLeft />
-                <BubbleRight />
+                <div className={styles.leftChat} style={{ marginBottom: '12px' }}>
+                    <BubbleLeft />
+                    <BubbleLeft />
+                    <BubbleLeft />
+                </div>
+                <div className={styles.rightChat} style={{ marginBottom: '12px' }}>
+                    <BubbleRight />
+                    <BubbleRight />
+                </div>
             </div>
             <InputContainer />
         </div>
