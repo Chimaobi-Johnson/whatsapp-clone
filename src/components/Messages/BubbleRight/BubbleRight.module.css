@@ -2,7 +2,7 @@
     font-size: 14px;
     padding: 6px 7px 8px 9px;
     display: block;
-    /* float: left; */
+    float: right;
     width: fit-content;
     max-width: 70%;
     position: relative;
@@ -15,11 +15,11 @@
     width: 0px;
     height: 0px;
     position: absolute;
-    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
     /* border-right: 15px solid #00bfb6; */
-    border-top: 15px solid #ffffff;
+    border-top: 15px solid #dcf8c6;
     border-bottom: 15px solid transparent;
-    left: -7px;
+    right: -7px;
     top: 0px;
   }
 
@@ -29,10 +29,14 @@
     position: absolute;
     bottom: 3px;
     right: 5px;
+    display: flex;
+    align-items: center;
 }
 
 .textWrapper {
     margin-right: 3.5rem;
-    width: fit-content;
 }
 
+.textWrapper span {
+    max-width: 70%;
+}

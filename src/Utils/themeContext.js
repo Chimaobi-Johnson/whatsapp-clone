@@ -8,6 +8,15 @@ const themes = {
             tertiary: '#f6f6f6',
             landing: '#f8f9fa'
         },
+        chat: {
+            background: {
+                primary: '#fff',
+                secondary: '#dcf8c6'
+            },
+            text: {
+                primary: '#000'
+            }
+        },
         text: {
             tertiary: '#9e9e9e'
         },
