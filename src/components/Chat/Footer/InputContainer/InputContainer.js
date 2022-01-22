@@ -1,11 +1,32 @@
-import React, { useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { sendMessage } from '../../../../store/actions/chat';
 import { ThemeContext } from '../../../../Utils/themeContext';
 
 import styles from './inputContainer.module.css';
 
 const InputContainer = props => {
 
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        window.addEventListener('keydown', handleKeyPress)   
+    }, [])
+
     const  { theme } = useContext(ThemeContext);
+
+    const [message, updateMessage] = useState('')
+    
+    const changeChatHandler = (e) => {
+        updateMessage(e.target.value);
+    }
+
+    const handleKeyPress = e => {
+        if (e.keyCode === 13) {
+            dispatch(sendMessage(message, props.id))
+        }
+    }
+
 
     return (
         <div className={styles.wrapper} style={{ backgroundColor: theme.background.secondary }}>
@@ -26,7 +47,7 @@ const InputContainer = props => {
             </div>
             <div className={styles.inputContainer}>
                 <div className={styles.inputWrapper}>
-                    <input type="text" placeholder="Type a message" className={styles.input} />
+                    <input type="text" placeholder="Type a message" onChange={(e) => changeChatHandler(e)} className={styles.input} />
                 </div>
             </div>
             <div className={styles.microphoneContainer}>

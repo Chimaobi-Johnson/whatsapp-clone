@@ -9,23 +9,38 @@ import styles from './chatbox.module.css';
 
 const ChatBox = props => {
 
-    const user = useSelector(data => data.User);
+    const currentChat = useSelector(data => data.currentChat);
+
+    const renderCurrentChat = () => {
+        if(currentChat.messages.length !== 0) {
+            return currentChat.messages.map(message => <BubbleLeft time={message.time} text={message.text} />)
+        }
+    }
+
+    
+    const renderUserChat = () => {
+        if(currentChat.received.length !== 0) {
+            return currentChat.received.map(message => <BubbleRight time={message.time} text={message.text} />)
+        }
+    }
 
     return (
         <div className={styles.wrapper}>
-            <ChatBoxHeader name={user.name} />
+            <ChatBoxHeader name={currentChat.name} />
             <div className={styles.chatContentBox}>
                 <div className={styles.leftChat}>
+                    {renderCurrentChat()}
+                    {/* <BubbleLeft />
                     <BubbleLeft />
-                    <BubbleLeft />
-                    <BubbleLeft />
+                    <BubbleLeft /> */}
                 </div>
                 <div className={styles.rightChat}>
-                    <BubbleRight />
-                    <BubbleRight />
+                    {renderUserChat()}
+                    {/* <BubbleRight />
+                    <BubbleRight /> */}
                 </div>
             </div>
-            <InputContainer />
+            <InputContainer id={currentChat.id} />
         </div>
     )
 }

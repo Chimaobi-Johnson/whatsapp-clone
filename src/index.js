@@ -7,11 +7,11 @@ import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
 import { ThemeProvider } from './Utils/themeContext';
 import thunk from 'redux-thunk';
-import User from './store/reducers/userReducer';
+import Chat from './store/reducers/chatReducer';
 
 
 const rootReducer = combineReducers({
-  User: User
+  currentChat: Chat
 });
 
 

@@ -1,9 +1,9 @@
 
 [   {   "id": 124154,
-        "name": "Chimaobi Wogu",
+        "name": "Chukwudi",
             "messages": [{
                 "id": 12151,
-                "time": "18:04",
+                "time": "10:04",
                 "status": "seen", 
                 "text": "How are you doing man?",
                 "reply": [],
@@ -11,17 +11,8 @@
                 "replyTo": 112
             },
             {
-                "id": 222,
-                "time": "18:04",
-                "status": "seen",
-                "text": "Fine. Nothing much",
-                "reply": [],
-                "to": 33333,
-                "replyTo": 112
-            },
-            {
                 "id": 333,
-                "time": "18:04",
+                "time": "13:04",
                 "status": "seen",
                 "text": "You later reason that matter?",
                 "reply": [],
@@ -30,9 +21,29 @@
             },
             {
                 "id": 444,
-                "time": "18:04",
+                "time": "15:04",
                 "status": "delivered", 
                 "text": "Ok no wahala?",
+                "reply": [],
+                "to": 33333,
+                "replyTo": 112
+            }
+        ],
+        "received": [
+            {
+                "id": 222,
+                "time": "12:04",
+                "status": "seen",
+                "text": "Fine. Nothing much",
+                "reply": [],
+                "to": 33333,
+                "replyTo": 112
+            },
+            {
+                "id": 222,
+                "time": "12:04",
+                "status": "seen",
+                "text": "No",
                 "reply": [],
                 "to": 33333,
                 "replyTo": 112

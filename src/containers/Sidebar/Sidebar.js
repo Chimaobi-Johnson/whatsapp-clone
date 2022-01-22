@@ -7,15 +7,12 @@ import { useDispatch } from "react-redux";
 import data from '../../data/data.json';
 
 import styles from './sidebar.module.css';
-import { updateCurrentUser } from '../../store/actions/user';
+import { updateCurrentChat } from '../../store/actions/chat';
 
 
 const Sidebar = props => {
    
     const dispatch = useDispatch();
-
-    // const data = JSON.parse(jsonData);
-    console.log(data)
 
     const { theme } = useContext(ThemeContext);
 
@@ -30,7 +27,7 @@ const Sidebar = props => {
     }
 
     function initChat(item) {
-        dispatch(updateCurrentUser(item));
+        dispatch(updateCurrentChat(item));
     }
 
     return (

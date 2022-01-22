@@ -1,14 +1,14 @@
-import { UPDATE_CURRENT_USER } from "../actions/action-type";
+// import { UPDATE_CURRENT_CHAT } from "../actions/action-type";
   
-  const initialState = {};
+//   const initialState = {};
   
-  export const updateCurrentUser = (state = initialState, action) => {
-    switch (action.type) {
-      case UPDATE_CURRENT_USER:
-        return action.payload
-      default:
-        return state;
-    }
-  };
+//   export const updateCurrentChat = (state = initialState, action) => {
+//     switch (action.type) {
+//       case UPDATE_CURRENT_CHAT:
+//         return action.payload
+//       default:
+//         return state;
+//     }
+//   };
   
-  export default updateCurrentUser;
+//   export default updateCurrentChat;
