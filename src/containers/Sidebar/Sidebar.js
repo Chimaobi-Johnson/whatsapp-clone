@@ -4,7 +4,7 @@ import SidebarHeader from '../../components/Sidebar/Header/SidebarHeader';
 import Searchbar from '../../components/Sidebar/Searchbar/Searchbar';
 import { ThemeContext } from '../../Utils/themeContext';
 import { useDispatch } from "react-redux";
-import data from '../../data/data';
+import data from '../../data/data.json';
 
 import styles from './sidebar.module.css';
 import { updateCurrentUser } from '../../store/actions/user';
@@ -13,6 +13,9 @@ import { updateCurrentUser } from '../../store/actions/user';
 const Sidebar = props => {
    
     const dispatch = useDispatch();
+
+    // const data = JSON.parse(jsonData);
+    console.log(data)
 
     const { theme } = useContext(ThemeContext);
 
