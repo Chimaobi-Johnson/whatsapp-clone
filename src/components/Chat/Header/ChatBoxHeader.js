@@ -6,6 +6,8 @@ import styles from './chatboxHeader.module.css';
 
 const ChatBoxHeader = props => {
 
+    const { name } = props;
+
     const { theme } = useContext(ThemeContext);
 
     
@@ -24,7 +26,7 @@ const ChatBoxHeader = props => {
                     </div>
                 </div>
                 <div className={styles.textContainer}>
-                    <h2>Samuel</h2>
+                    <h2>{name}</h2>
                     <p>Online</p>
                 </div>
             </div>

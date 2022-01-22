@@ -10,14 +10,14 @@ import MuteButton from './ContactComponents/MuteButton/MuteButton';
 
 const Contact = props => {
 
-    const { name, status } = props;
+    const { name, status, onClick } = props;
 
     console.log(status)
 
     const { theme } = useContext(ThemeContext)
 
     return (
-        <div className={styles.wrapper} style={{ backgroundColor: theme.background.primary }}>
+        <div onClick={onClick} className={styles.wrapper} style={{ backgroundColor: theme.background.primary }}>
             <div className={styles.displayPictureContainer}>
                 <img src={dpImage} alt="" className={styles.image} />
             </div>

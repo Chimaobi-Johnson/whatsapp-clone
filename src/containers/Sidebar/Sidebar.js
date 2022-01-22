@@ -3,13 +3,17 @@ import Contact from '../../components/Sidebar/Contact/Contact';
 import SidebarHeader from '../../components/Sidebar/Header/SidebarHeader';
 import Searchbar from '../../components/Sidebar/Searchbar/Searchbar';
 import { ThemeContext } from '../../Utils/themeContext';
+import { useDispatch } from "react-redux";
 import data from '../../data/data';
 
 import styles from './sidebar.module.css';
+import { updateCurrentUser } from '../../store/actions/user';
 
 
 const Sidebar = props => {
    
+    const dispatch = useDispatch();
+
     const { theme } = useContext(ThemeContext);
 
     const [lastMessage, setLastMessage] = useState('')
@@ -20,6 +24,10 @@ const Sidebar = props => {
         } else {
             setLastMessage('Start a new conservation')
         }
+    }
+
+    function initChat(item) {
+        dispatch(updateCurrentUser(item));
     }
 
     return (
@@ -34,6 +42,7 @@ const Sidebar = props => {
                         key={Math.floor(Math.random() * 2000)}
                         name={item.name}
                         status={getMessageStatus(item.messages)}
+                        onClick={() => initChat(item)}
                     />
                 })}
             </div>
