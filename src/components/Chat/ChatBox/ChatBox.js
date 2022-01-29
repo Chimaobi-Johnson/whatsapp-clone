@@ -11,16 +11,22 @@ const ChatBox = props => {
 
     const currentChat = useSelector(data => data.currentChat);
 
-    const renderCurrentChat = () => {
-        if(currentChat.messages.length !== 0) {
-            return currentChat.messages.map(message => <BubbleLeft time={message.time} text={message.text} />)
-        }
-    }
+    // const renderCurrentChat = () => {
+    //     if(currentChat.messages.length !== 0) {
+    //         return currentChat.messages.map(message => <div className={styles.leftChat}><BubbleLeft time={message.time} text={message.text} /></div>)
+    //     }
+    // }
 
     
-    const renderUserChat = () => {
-        if(currentChat.received.length !== 0) {
-            return currentChat.received.map(message => <BubbleRight time={message.time} text={message.text} />)
+    const renderCurrentChat = () => {
+        if(currentChat.messages.length !== 0) {
+            return currentChat.messages.map(message => {
+                if(message.sender === 'user') {
+                    return <div className={styles.rightChat}><BubbleRight time={message.time} text={message.text} /></div>
+                } else {
+                    return <div className={styles.leftChat}><BubbleLeft time={message.time} text={message.text} /></div>
+                }
+            })
         }
     }
 
@@ -28,17 +34,17 @@ const ChatBox = props => {
         <div className={styles.wrapper}>
             <ChatBoxHeader name={currentChat.name} />
             <div className={styles.chatContentBox}>
-                <div className={styles.leftChat}>
+                {/* <div className={styles.leftChat}> */}
                     {renderCurrentChat()}
                     {/* <BubbleLeft />
                     <BubbleLeft />
                     <BubbleLeft /> */}
-                </div>
-                <div className={styles.rightChat}>
-                    {renderUserChat()}
+                {/* </div> */}
+                {/* <div className={styles.rightChat}> */}
+                    {/* {renderUserChat()} */}
                     {/* <BubbleRight />
                     <BubbleRight /> */}
-                </div>
+                {/* </div> */}
             </div>
             <InputContainer id={currentChat.id} />
         </div>

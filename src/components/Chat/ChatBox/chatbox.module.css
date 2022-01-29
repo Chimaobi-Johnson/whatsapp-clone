@@ -14,12 +14,12 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-bottom: 12px;
+    /* margin-bottom: 12px; */
 }
 
 .rightChat {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    margin-bottom: 12px;
+    /* margin-bottom: 12px; */
 }
