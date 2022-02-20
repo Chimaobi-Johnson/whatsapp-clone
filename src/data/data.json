@@ -12,10 +12,29 @@
                 "replyTo": 112
             },
             {
+                "id": 222,
+                "time": "12:04",
+                "status": "seen",
+                "text": "Fine. Nothing much",
+                "reply": [],
+                "to": 33333,
+                "replyTo": 112
+            },
+            {
                 "id": 333,
                 "time": "13:04",
                 "status": "seen",
                 "text": "You later reason that matter?",
+                "reply": [],
+                "sender": "user",
+                "to": 33333,
+                "replyTo": 112
+            },
+            {
+                "id": 222,
+                "time": "12:04",
+                "status": "seen",
+                "text": "No",
                 "reply": [],
                 "to": 33333,
                 "replyTo": 112
@@ -25,25 +44,7 @@
                 "time": "15:04",
                 "status": "delivered", 
                 "text": "Ok no wahala?",
-                "reply": [],
-                "to": 33333,
-                "replyTo": 112
-            },
-            {
-                "id": 222,
-                "time": "12:04",
-                "status": "seen",
-                "text": "Fine. Nothing much",
-                "reply": [],
-                "to": 33333,
                 "sender": "user",
-                "replyTo": 112
-            },
-            {
-                "id": 222,
-                "time": "12:04",
-                "status": "seen",
-                "text": "No",
                 "reply": [],
                 "to": 33333,
                 "replyTo": 112

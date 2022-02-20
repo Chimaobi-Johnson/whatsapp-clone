@@ -34,17 +34,7 @@ const ChatBox = props => {
         <div className={styles.wrapper}>
             <ChatBoxHeader name={currentChat.name} />
             <div className={styles.chatContentBox}>
-                {/* <div className={styles.leftChat}> */}
-                    {renderCurrentChat()}
-                    {/* <BubbleLeft />
-                    <BubbleLeft />
-                    <BubbleLeft /> */}
-                {/* </div> */}
-                {/* <div className={styles.rightChat}> */}
-                    {/* {renderUserChat()} */}
-                    {/* <BubbleRight />
-                    <BubbleRight /> */}
-                {/* </div> */}
+                {renderCurrentChat()}
             </div>
             <InputContainer id={currentChat.id} />
         </div>
