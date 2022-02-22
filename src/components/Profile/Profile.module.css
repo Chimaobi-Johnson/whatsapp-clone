@@ -1,0 +1,30 @@
+.wrapper {
+    width: 30%;
+    min-height: 100vh;
+    position: absolute;
+    background-color: blue;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.header {
+    background-color: green;
+    height: 108px;
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.headerContent {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-right: 20px;
+    padding-left: 23px;
+}
+
+.profileText h2 {
+    margin: 0;
+}

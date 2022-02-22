@@ -5,6 +5,7 @@ import Searchbar from '../../components/Sidebar/Searchbar/Searchbar';
 import { ThemeContext } from '../../Utils/themeContext';
 import { useDispatch } from "react-redux";
 import data from '../../data/data.json';
+import Profile from '../../components/Profile/Profile'
 
 import styles from './sidebar.module.css';
 import { updateCurrentChat } from '../../store/actions/chat';
@@ -31,7 +32,8 @@ const Sidebar = props => {
     }
 
     return (
-        <div className={styles.wrapper} style={{ backgroundColor: theme.background.tertiary }}>
+        <>
+         <div className={styles.wrapper} style={{ backgroundColor: theme.background.tertiary }}>
             <header style={styles.header}>
                 <SidebarHeader />
                 <Searchbar />
@@ -47,6 +49,8 @@ const Sidebar = props => {
                 })}
             </div>
         </div>
+          <Profile />
+        </>
     )
 }
 

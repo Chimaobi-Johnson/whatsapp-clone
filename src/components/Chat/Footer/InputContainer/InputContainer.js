@@ -7,6 +7,8 @@ import styles from './inputContainer.module.css';
 
 const InputContainer = props => {
 
+    // const currentChat = useSelector(data => data.currentChat);
+
     const dispatch = useDispatch();
 
     useEffect(() => {
