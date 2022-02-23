@@ -9,7 +9,6 @@
 }
 
 .header {
-    background-color: green;
     height: 108px;
     display: flex;
     flex: none;
@@ -23,8 +22,88 @@
     align-items: center;
     padding-right: 20px;
     padding-left: 23px;
+    font-size: 13px;
+    color: #fff;
 }
 
 .profileText h2 {
-    margin: 0;
+    /* margin: 0; */
+}
+
+.backButton button {
+    outline: none;
+    padding: 0;
+    background: none;
+    border: 0;
+    margin-top: 5px;
+    margin-right: 1.8rem;
+    color: #fff;
+}
+
+.pictureContainer {
+    /* position: relative; */
+}
+
+.imageWrapper {
+    width: 200px;
+    height: 200px;
+    margin-top: 28px;
+    margin-bottom: 28px;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+}
+
+.imageWrapper img {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+
+.imageWrapper:hover > .imageOverlay {
+    display: block;
+}
+
+.name {
+    padding: 14px 30px 10px;
+}
+
+.title {
+    font-size: 14px;
+}
+
+.userName {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.subText {
+    padding: 4px 20px 28px 30px;
+    font-size: .9rem;
+}
+
+.imageOverlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #6c7d8ad1;
+    border-radius: 100%;
+    cursor: pointer;
+    display: none;
+}
+
+.overlayContent {
+    font-size: 9px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 61%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+.overlayContent h2 {
+    font-weight: normal;
 }

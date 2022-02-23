@@ -6,7 +6,20 @@ const themes = {
             primary: '#fff',
             secondary: '#ededed',
             tertiary: '#f6f6f6',
-            landing: '#f8f9fa'
+            landing: '#f8f9fa',
+        },
+        profile: {
+            background: {
+                primary: '#f0f2f5',
+                secondary: '#008069',
+                tertiary: '#fff'
+            },
+            text: {
+                primary: '#008069',
+                secondary: '#3b4a54',
+                secondary2: '#8696a0',
+                tertiary: '#fff'
+            }
         },
         chat: {
             background: {
