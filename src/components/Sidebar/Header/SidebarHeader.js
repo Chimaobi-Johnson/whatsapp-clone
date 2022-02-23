@@ -12,7 +12,7 @@ const SidebarHeader = props => {
     return (
         <div className={styles.wrapper} style={{backgroundColor: theme.background.secondary}}>
             <div className={styles.dpContainer}>
-                <div className={styles.pictureWrapper}>
+                <div className={styles.pictureWrapper} onClick={() => props.initProfileHandler()}>
                     <img src={displayPicture} alt="dp" /> 
                 </div>
             </div>

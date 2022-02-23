@@ -29,11 +29,11 @@ const Profile = props => {
     }
 
     return (
-         <div className={styles.wrapper} style={{ backgroundColor: theme.profile.background.primary }}>
+         <div id="profile" className={styles.wrapper} style={{ backgroundColor: theme.profile.background.primary }}>
              <div className={styles.header} style={{ backgroundColor: theme.profile.background.secondary }}>
                 <div className={styles.headerContent}>
                     <div className={styles.backButton}>
-                        <button>
+                        <button onClick={() => props.removeProfileHandler()}>
                             <span data-testid="back" data-icon="back" class="">
                                 <svg viewBox="0 0 24 24" width="24" height="24" class="">
                                     <path fill="currentColor" d="m12 4 1.4 1.4L7.8 11H20v2H7.8l5.6 5.6L12 20l-8-8 8-8z"></path>
@@ -46,7 +46,7 @@ const Profile = props => {
                     </div>
                 </div>
              </div>
-             <div className={styles.pictureContainer}>
+             <div id="picture" className={styles.pictureContainer}>
                     <div className={styles.imageWrapper}>
                         <div className={styles.imageOverlay}>
                             <div className={styles.overlayContent}>
@@ -59,7 +59,7 @@ const Profile = props => {
                         <img src={displayPicture} alt="CW" />
                     </div>
              </div>
-             <div className={styles.content}>
+             <div id="content" className={styles.content}>
                  {userInfoComponent('Your name', 'Chimaobi')}
                  <div className={styles.subText} style={{ color: theme.profile.text.secondary2 }}>
                     This is not your username or pin. This name will be visible to your whatsapp contacts

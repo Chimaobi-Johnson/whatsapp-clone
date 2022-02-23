@@ -17,7 +17,24 @@ const Sidebar = props => {
 
     const { theme } = useContext(ThemeContext);
 
-    const [lastMessage, setLastMessage] = useState('')
+    const [lastMessage, setLastMessage] = useState('');
+
+    const initProfileHandler = () => {
+        document.getElementById('profile').style.left = '0'
+    }
+
+    const removeProfileHandler = () => {
+        document.getElementById('profile').style.left = '-100%';
+        // const picture = document.getElementById('picture');
+        // const content = document.getElementById('content');
+        // setTimeout(() => {
+        //     picture.style.display = 'block';
+        // }, 1000);
+        // setTimeout(() => {
+        //     content.style.display = 'block';
+        // }, 1500);
+    }
+
 
     const getMessageStatus = (messages) => {
         if(messages.length !== 0) { // check if there is any existing message
@@ -35,7 +52,7 @@ const Sidebar = props => {
         <>
          <div className={styles.wrapper} style={{ backgroundColor: theme.background.tertiary }}>
             <header style={styles.header}>
-                <SidebarHeader />
+                <SidebarHeader initProfileHandler={initProfileHandler} />
                 <Searchbar />
             </header>
             <div className={styles.contactContainer}>
@@ -49,7 +66,7 @@ const Sidebar = props => {
                 })}
             </div>
         </div>
-          <Profile />
+          <Profile removeProfileHandler={removeProfileHandler} />
         </>
     )
 }
