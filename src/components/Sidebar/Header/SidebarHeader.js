@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import MessageSVG from '../../SVG/message.svg';
 import displayPicture from '../../../images/whatsapp-image.jpeg';
 
 import styles from './SidebarHeader.module.css';

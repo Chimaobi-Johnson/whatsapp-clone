@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useContext } from 'react';
 import Contact from '../../components/Sidebar/Contact/Contact';
 import SidebarHeader from '../../components/Sidebar/Header/SidebarHeader';
 import Searchbar from '../../components/Sidebar/Searchbar/Searchbar';
@@ -17,7 +17,7 @@ const Sidebar = props => {
 
     const { theme } = useContext(ThemeContext);
 
-    const [lastMessage, setLastMessage] = useState('');
+    // const [lastMessage, setLastMessage] = useState('');
 
     const initProfileHandler = () => {
         document.getElementById('profile').style.left = '0'
@@ -40,7 +40,7 @@ const Sidebar = props => {
         if(messages.length !== 0) { // check if there is any existing message
             return messages[messages.length - 1].status // take last item in array and get status
         } else {
-            setLastMessage('Start a new conservation')
+            // setLastMessage('Start a new conservation')
         }
     }
 

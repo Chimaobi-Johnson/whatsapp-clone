@@ -13,7 +13,7 @@ const InputContainer = props => {
 
     useEffect(() => {
         window.addEventListener('keydown', handleKeyPress)   
-    }, [])
+    })
 
     const  { theme } = useContext(ThemeContext);
 
