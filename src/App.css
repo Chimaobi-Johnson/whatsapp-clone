@@ -1,4 +1,8 @@
 .wrapper {
+
+}
+
+.container {
   position: fixed;
   display: flex;
   align-items: flex-start;

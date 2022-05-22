@@ -31,6 +31,7 @@ const themes = {
             }
         },
         text: {
+            secondary: '#667781',
             tertiary: '#9e9e9e'
         },
         notification: {
