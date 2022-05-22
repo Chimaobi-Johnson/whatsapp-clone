@@ -13,7 +13,7 @@
 }
 
 .header p {
-    padding: 4px 16px;
+    padding: 11px 16px;
     margin-bottom: 0;
 }
 
@@ -63,4 +63,98 @@
 
 .aboutHeader span {
     font-size: .9rem;
+}
+
+.links {
+    font-size: .9rem;
+    margin-bottom: 10px;
+    padding: 17px 30px 19px 30px;
+    box-shadow: 0 1px 3px rgba(11,20,26,0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.linksDetails {
+    display: flex;
+    padding-top: 6px;
+}
+
+.number {
+    margin-right: 8px;
+}
+
+.starredMessages {
+    margin-bottom: 10px;
+}
+
+.contactSettings {
+    margin-bottom: 10px;
+}
+
+.boxContainer {
+    padding: 17px 30px 19px 30px;
+    box-shadow: 0 1px 3px rgba(11,20,26,0.08);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.iconContainer {
+    margin-right: 8px;
+    width: 40px;
+    width: 40px;
+    text-align: center;
+}
+
+.textContainer {
+    flex-grow: 1;
+}
+
+.boxTitle {
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.boxText {
+    font-size: .9rem;
+    margin: 0;
+    padding-right: 35px;
+}
+
+.groups {
+    font-size: .9rem;
+    margin-bottom: 10px;
+    padding: 17px 30px 19px 30px;
+    box-shadow: 0 1px 3px rgba(11,20,26,0.08);
+}
+
+.contactActions {
+    margin-bottom: 10px;
+    padding: 17px 30px 19px 10px;
+    box-shadow: 0 1px 3px rgba(11,20,26,0.08);
+    color: #ea0038; /* danger */
+}
+
+.block, .report {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.actionIcon {
+    width: 74px;
+    text-align: center;
+}
+
+.actionText {
+    flex-grow: 1;
+}
+
+.delete {
+    color: #ea0038; /* danger */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 1px 3px rgba(11,20,26,0.08);
 }
