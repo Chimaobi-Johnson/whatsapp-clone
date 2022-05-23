@@ -51,7 +51,7 @@ const Sidebar = props => {
     return (
         <>
          <div className={styles.wrapper} style={{ backgroundColor: theme.background.tertiary }}>
-            <header style={styles.header}>
+            <header className={styles.header}>
                 <SidebarHeader initProfileHandler={initProfileHandler} />
                 <Searchbar />
             </header>

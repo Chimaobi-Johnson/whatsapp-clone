@@ -1,6 +1,6 @@
 .wrapper {
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -8,6 +8,7 @@
 
 .chatContentBox {
     padding: 0 4rem;
+    overflow-y: scroll;
 }
 
 .leftChat {

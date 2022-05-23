@@ -1,5 +1,16 @@
 .wrapper {
     flex-basis: 30%;
-    min-height: 100vh;
+    height: 100vh;
     position: relative;
+}
+
+.header {
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.contactContainer {
+    overflow-y: scroll;
+    height: 90vh;
 }

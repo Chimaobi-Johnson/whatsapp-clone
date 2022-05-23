@@ -4,12 +4,19 @@
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
+    position: relative;
+}
+
+.contentContainer {
     overflow-y: scroll;
 }
 
 .header {
     height: 59px;
     border-left: 1px solid rgb(218, 218, 218);
+    top: 0;
+    right: 0;
+    width: 100%;
 }
 
 .header p {
@@ -156,5 +163,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 17px 30px 19px 10px;
     box-shadow: 0 1px 3px rgba(11,20,26,0.08);
+    margin-bottom: 40px;
 }

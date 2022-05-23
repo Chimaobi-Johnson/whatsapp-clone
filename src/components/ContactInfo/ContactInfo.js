@@ -40,81 +40,88 @@ const ContactInfo = props => {
             <div className={styles.header} style={{ backgroundColor: theme.background.secondary }}>
                 <p>Contact Info</p>
             </div>
-            <div className={styles.basicInfo} style={{ backgroundColor: theme.background.primary }}>
-                <div className={styles.image}>
-                    <img src={displayImage} alt="" />
-                </div>
-                <h4>Freddie</h4>
-                <p style={{ color: theme.text.secondary }}>+44 154441212</p>
-            </div>
-            <div className={styles.about} style={{ backgroundColor: theme.background.primary }}>
-                <div className={styles.aboutHeader} style={{ color: theme.text.secondary }}>
-                    <span>About</span>
-                </div>
-                <p>
-                    Available
-                </p>
-            </div>
-            <div className={styles.links} style={{ color: theme.text.secondary, backgroundColor: theme.background.primary }}>
-                <div className={styles.text}>
-                    <span>Media, links and docs</span>
-                </div>
-                <div className={styles.linksDetails}>
-                    <div className={styles.number}>
-                         <span>0</span>
+
+            <div className={styles.contentContainer}>
+
+                <div className={styles.basicInfo} style={{ backgroundColor: theme.background.primary }}>
+                    <div className={styles.image}>
+                        <img src={displayImage} alt="" />
                     </div>
-                   <div>
-                        <span data-testid="chevron-right-alt" data-icon="chevron-right-alt" class="aft2yglh">
-                            <svg viewBox="0 0 10 21" width="10" height="21" class="">
-                                <path fill="currentColor" d="m1 15.75 5.2-5.2L1 5.35l1.5-1.5 6.5 6.7-6.6 6.6-1.4-1.4z">
-                                </path>
-                            </svg>
-                        </span>
-                   </div>
+                    <h4>Freddie</h4>
+                    <p style={{ color: theme.text.secondary }}>+44 154441212</p>
+                </div>
+                <div className={styles.about} style={{ backgroundColor: theme.background.primary }}>
+                    <div className={styles.aboutHeader} style={{ color: theme.text.secondary }}>
+                        <span>About</span>
+                    </div>
+                    <p>
+                        Available
+                    </p>
+                </div>
+                <div className={styles.links} style={{ color: theme.text.secondary, backgroundColor: theme.background.primary }}>
+                    <div className={styles.text}>
+                        <span>Media, links and docs</span>
+                    </div>
+                    <div className={styles.linksDetails}>
+                        <div className={styles.number}>
+                            <span>0</span>
+                        </div>
+                    <div>
+                            <span data-testid="chevron-right-alt" data-icon="chevron-right-alt" class="aft2yglh">
+                                <svg viewBox="0 0 10 21" width="10" height="21" class="">
+                                    <path fill="currentColor" d="m1 15.75 5.2-5.2L1 5.35l1.5-1.5 6.5 6.7-6.6 6.6-1.4-1.4z">
+                                    </path>
+                                </svg>
+                            </span>
+                    </div>
+                    
+                    </div>
+                </div>
+                <div className={styles.starredMessages}>
+                    {boxComponent(starIcon, "Starred messages", "", arrowIcon)}
+                </div>
                 
+                <div className={styles.contactSettings}>
+                    {boxComponent(bellIcon, "Mute notifications")}
+                    {boxComponent(timeIcon, "Disappearing messages", "Off", arrowIcon)}
+                    {boxComponent(padlockIcon, "Encryption", "Messages are end-to-end encrypted. Click to verify.")}
                 </div>
-            </div>
-            <div className={styles.starredMessages}>
-                {boxComponent(starIcon, "Starred messages", "", arrowIcon)}
-            </div>
-            
-            <div className={styles.contactSettings}>
-                {boxComponent(bellIcon, "Mute notifications")}
-                {boxComponent(timeIcon, "Disappearing messages", "Off", arrowIcon)}
-                {boxComponent(padlockIcon, "Encryption", "Messages are end-to-end encrypted. Click to verify.")}
-            </div>
 
-            <div className={styles.groups} style={{ color: theme.text.secondary, backgroundColor: theme.background.primary }}>
-                <span>0 groups in common</span>
-            </div>
-
-            <div className={styles.contactActions} style={{ backgroundColor: theme.background.primary }}>
-                <div className={styles.block}>
-                    <div className={styles.actionIcon}>
-                      <span data-testid="settings-blocked" data-icon="settings-blocked" class=""><svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M12 2.8c-5.3 0-9.7 4.3-9.7 9.7s4.3 9.7 9.7 9.7 9.7-4.3 9.7-9.7-4.4-9.7-9.7-9.7zm-7.3 9.7c0-4 3.3-7.3 7.3-7.3 1.6 0 3.1.5 4.3 1.4L6.1 16.8c-.9-1.2-1.4-2.7-1.4-4.3zm7.3 7.3c-1.6 0-3-.5-4.2-1.4L17.9 8.3c.9 1.2 1.4 2.6 1.4 4.2 0 4-3.3 7.3-7.3 7.3z"></path></svg></span>
-                    </div>
-                    <div className={styles.actionText}>
-                        <p>Block Freddie</p>
-                    </div>
+                <div className={styles.groups} style={{ color: theme.text.secondary, backgroundColor: theme.background.primary }}>
+                    <span>0 groups in common</span>
                 </div>
-                <div className={styles.report}>
-                    <div className={styles.actionIcon}>
-                        <span data-testid="thumbs-down" data-icon="thumbs-down" class=""><svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M14.091 4.2H6.318c-.691 0-1.295.432-1.555 1.036l-2.591 6.132c-.086.173-.172.346-.172.605V13.7c0 .95.777 1.727 1.727 1.727h5.441L8.305 19.4v.259c0 .345.173.691.345.95l.95.864 5.7-5.7c.345-.345.518-.777.518-1.209V5.927c0-.95-.777-1.727-1.727-1.727zm3.454 0v10.364H21V4.2h-3.455z" id="thumb-down"></path></svg></span>                   
+
+                <div className={styles.contactActions} style={{ backgroundColor: theme.background.primary }}>
+                    <div className={styles.block}>
+                        <div className={styles.actionIcon}>
+                        <span data-testid="settings-blocked" data-icon="settings-blocked" class=""><svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M12 2.8c-5.3 0-9.7 4.3-9.7 9.7s4.3 9.7 9.7 9.7 9.7-4.3 9.7-9.7-4.4-9.7-9.7-9.7zm-7.3 9.7c0-4 3.3-7.3 7.3-7.3 1.6 0 3.1.5 4.3 1.4L6.1 16.8c-.9-1.2-1.4-2.7-1.4-4.3zm7.3 7.3c-1.6 0-3-.5-4.2-1.4L17.9 8.3c.9 1.2 1.4 2.6 1.4 4.2 0 4-3.3 7.3-7.3 7.3z"></path></svg></span>
+                        </div>
+                        <div className={styles.actionText}>
+                            <p>Block Freddie</p>
+                        </div>
                     </div>
-                    <div className={styles.actionText}>
-                        <p>Report Freddie</p> 
+                    <div className={styles.report}>
+                        <div className={styles.actionIcon}>
+                            <span data-testid="thumbs-down" data-icon="thumbs-down" class=""><svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M14.091 4.2H6.318c-.691 0-1.295.432-1.555 1.036l-2.591 6.132c-.086.173-.172.346-.172.605V13.7c0 .95.777 1.727 1.727 1.727h5.441L8.305 19.4v.259c0 .345.173.691.345.95l.95.864 5.7-5.7c.345-.345.518-.777.518-1.209V5.927c0-.95-.777-1.727-1.727-1.727zm3.454 0v10.364H21V4.2h-3.455z" id="thumb-down"></path></svg></span>                   
+                        </div>
+                        <div className={styles.actionText}>
+                            <p>Report Freddie</p> 
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div className={styles.delete} style={{ backgroundColor: theme.background.primary }}>
-                    <div className={styles.actionIcon}>
-                      <span data-testid="delete" data-icon="delete" class=""><svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M6 18c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V6H6v12zM19 3h-3.5l-1-1h-5l-1 1H5v2h14V3z"></path></svg></span>   
-                    </div>
-                    <div className={styles.actionText}>
-                        <p>Delete Chat</p> 
-                    </div>
+                <div className={styles.delete} style={{ backgroundColor: theme.background.primary }}>
+                        <div className={styles.actionIcon}>
+                        <span data-testid="delete" data-icon="delete" class=""><svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M6 18c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V6H6v12zM19 3h-3.5l-1-1h-5l-1 1H5v2h14V3z"></path></svg></span>   
+                        </div>
+                        <div className={styles.actionText}>
+                            <p>Delete Chat</p> 
+                        </div>
+                </div>
+
+
             </div>
+           
         </div>
     )
 
