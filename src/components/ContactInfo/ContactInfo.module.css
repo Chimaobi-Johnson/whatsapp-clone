@@ -8,8 +8,21 @@
 }
 
 .contentContainer {
-    overflow-y: scroll;
+    overflow-y: auto;
 }
+
+.contentContainer::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+.contentContainer::-webkit-scrollbar-track {
+    background: none;
+}
+
+.contentContainer::-webkit-scrollbar-thumb {
+    background: #c5c4c1; 
+}
+
 
 .header {
     height: 59px;

@@ -11,6 +11,18 @@
 }
 
 .contactContainer {
-    overflow-y: scroll;
+    overflow-y: auto;
     height: 90vh;
+}
+
+.contactContainer::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+.contactContainer::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+.contactContainer::-webkit-scrollbar-thumb {
+    background: #c5c4c1; 
 }

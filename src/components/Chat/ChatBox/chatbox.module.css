@@ -8,7 +8,19 @@
 
 .chatContentBox {
     padding: 0 4rem;
-    overflow-y: scroll;
+    overflow-y: auto;
+}
+
+.chatContentBox::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+.chatContentBox::-webkit-scrollbar-track {
+    background: none;
+}
+
+.chatContentBox::-webkit-scrollbar-thumb {
+    background: #c5c4c1; 
 }
 
 .leftChat {
