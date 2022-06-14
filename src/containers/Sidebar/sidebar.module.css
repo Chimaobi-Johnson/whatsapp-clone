@@ -1,6 +1,6 @@
 .wrapper {
     flex-basis: 30%;
-    height: 100vh;
+    height: 96vh;
     position: relative;
 }
 
@@ -11,8 +11,8 @@
 }
 
 .contactContainer {
-    overflow-y: auto;
-    height: 90vh;
+    overflow-y: scroll;
+    height: 84.5vh;
 }
 
 .contactContainer::-webkit-scrollbar {

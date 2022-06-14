@@ -7,6 +7,7 @@ const themes = {
             secondary: '#ededed',
             tertiary: '#f6f6f6',
             landing: '#f8f9fa',
+            container: '#d8dbdc',
         },
         profile: {
             background: {

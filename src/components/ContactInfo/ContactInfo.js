@@ -28,7 +28,7 @@ const ContactInfo = props => {
 
             
             if(currentState) {
-                
+                boxContainer.style.display = 'flex';
                 boxContainer.style.width = '25%';
                 setTimeout(() => {
                     contactInfoDetails.style.transform = 'translateY(0%)';
@@ -36,6 +36,7 @@ const ContactInfo = props => {
                 
             } else {
                 boxContainer.style.width = '0%';
+                boxContainer.style.display = 'none';
                 contactInfoDetails.style.transform = 'translateY(-130%)';
             }
     }

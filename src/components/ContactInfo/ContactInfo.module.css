@@ -1,7 +1,7 @@
 .wrapper {
     width: 0%;
-    height: 100vh;
-    display: flex;
+    height: 96vh;
+    display: none;
     justify-content: flex-start;
     flex-direction: column;
     position: relative;
@@ -32,7 +32,7 @@
     border-left: 1px solid rgb(218, 218, 218);
     top: 0;
     right: 0;
-    width: 100%;
+    width: 91%;
     display: flex;
     justify-content: flex-start;
     align-items: center;

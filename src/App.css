@@ -1,8 +1,26 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.background-cover {
+  height: 13.5vh;
+  background-color: #00a884; 
+  width: 100%;
+  position: absolute;
+}
+
 .container {
-  position: fixed;
+  box-shadow: 0 6px 18px rgba(#eee,.05);
   display: flex;
   align-items: flex-start;
-  min-height: 100vh;
-  width: 100%;
+  min-height: 80vh;
+  width: 93%;
   justify-content: flex-start;
+  margin-top: 2vh;
+  z-index: 1;
 }
+
+
+
