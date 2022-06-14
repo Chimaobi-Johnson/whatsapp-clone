@@ -1,12 +1,13 @@
 import React, { useContext } from 'react';
 import { ThemeContext } from '../../../Utils/themeContext';
-import imageURL from '../../../images/43915093_734048600279905_7917941584617077357_n(1).jpg';
 
 import styles from './chatboxHeader.module.css';
+import { useDispatch } from 'react-redux';
+import { toggleContactSidebar } from '../../../store/actions/chat';
 
 const ChatBoxHeader = props => {
 
-    const { name } = props;
+    const { name, imageURL } = props;
 
     const { theme } = useContext(ThemeContext);
 
@@ -16,10 +17,12 @@ const ChatBoxHeader = props => {
         borderLeft: '1px solid #dadada' 
     }
 
+    const dispatch = useDispatch();
+
 
     return (
         <header style={dynamicStyles} className={styles.wrapper}>
-            <div className={styles.headerLeft}>
+            <div className={styles.headerLeft} onClick={() => dispatch(toggleContactSidebar())}>
                 <div className={styles.imageContainer}>
                     <div className={styles.imageWrapper}>
                         <img src={imageURL} alt="DP" className={styles.image} />

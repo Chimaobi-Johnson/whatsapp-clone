@@ -9,7 +9,7 @@ import styles from './chatbox.module.css';
 
 const ChatBox = props => {
 
-    const currentChat = useSelector(data => data.currentChat);
+    const currentChat = useSelector(data => data.app.chatData);
 
     // const renderCurrentChat = () => {
     //     if(currentChat.messages.length !== 0) {
@@ -32,7 +32,7 @@ const ChatBox = props => {
 
     return (
         <div className={styles.wrapper}>
-            <ChatBoxHeader name={currentChat.name} />
+            <ChatBoxHeader imageURL={currentChat.picture} name={currentChat.name} />
             <div className={styles.chatContentBox}>
                 {renderCurrentChat()}
             </div>

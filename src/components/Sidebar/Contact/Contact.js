@@ -3,16 +3,14 @@ import { ThemeContext } from '../../../Utils/themeContext';
 
 import styles from './contact.module.css';
 
-import dpImage from '../../../images/43915093_734048600279905_7917941584617077357_n(1).jpg';
 import Check from './ContactComponents/Check/Check';
 import OptionsButton from './ContactComponents/OptionsButton/OptionsButton';
 import MuteButton from './ContactComponents/MuteButton/MuteButton';
 
 const Contact = props => {
 
-    const { name, status, onClick } = props;
+    const { dpImage, name, status, onClick } = props;
 
-    console.log(status)
 
     const { theme } = useContext(ThemeContext)
 

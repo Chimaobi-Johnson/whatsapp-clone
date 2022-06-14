@@ -1,4 +1,4 @@
-import { UPDATE_CURRENT_CHAT } from './action-type';
+import { TOGGLE_CONTACT_SIDEBAR, UPDATE_CURRENT_CHAT } from './action-type';
 
 import data from '../../data/data.json';
 
@@ -27,4 +27,10 @@ export const sendMessage = (item, id) => (dispatch) => {
     //     console.log(JSON.stringify(file));
     //     console.log('writing to ' + fileName);
     //   });
+}
+
+export const toggleContactSidebar = () => dispatch => {
+    dispatch({
+        type: TOGGLE_CONTACT_SIDEBAR,
+    })
 }

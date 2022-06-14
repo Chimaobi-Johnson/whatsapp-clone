@@ -1,6 +1,7 @@
 
 [   {   "id": 124154,
         "name": "Chukwudi",
+        "picture": "images/profile/profile-2.jpg",
             "messages": [{
                 "id": 12151,
                 "time": "10:04",
@@ -319,6 +320,7 @@
     },
 
     {   "id": 33333,
+        "picture": "images/profile/profile-1.jpg",
         "name": "Prosper",
             "messages": [{
                 "id": 444,
@@ -361,6 +363,7 @@
 
     {   "id": 33333,
         "name": "Wisdom",
+        "picture": "images/profile/profile-3.jpg",
         "messages": [
             {
                 "id": 444,
@@ -376,6 +379,7 @@
 
     {   "id": 33333,
         "name": "Abu Ali (UK)",
+        "picture": "images/profile/profile-4.jpg",
             "messages": [
                 {
                     "id": 444,
@@ -392,6 +396,7 @@
 
     {   "id": 33333,
         "name": "Uju Glo",
+        "picture": "images/profile/profile-5.jpg",
             "messages": [
                 {
                     "id": 444,
@@ -407,6 +412,7 @@
 
     {   "id": 33333,
         "name": "BCU Group",
+        "picture": "images/profile/profile-6.jpg",
             "messages": [
                 {
                     "id": 444,
@@ -422,6 +428,7 @@
 
     {   "id": 33333,
         "name": "Joy Odinaka",
+        "picture": "images/profile/profile-7.jpg",
             "messages": [
                 {
                     "id": 444,
@@ -437,6 +444,7 @@
 
     {   "id": 33333,
         "name": "Mum",
+        "picture": "images/profile/profile-8.jpg",
             "messages": [
                 {
                     "id": 444,
@@ -452,6 +460,7 @@
     },
     {   "id": 33333,
         "name": "+2347584515451",
+        "picture": "images/profile/profile-9.jpg",
             "messages": [
                 {
                     "id": 444,
@@ -466,6 +475,7 @@
     },
     {   "id": 33333,
         "name": "Felix",
+        "picture": "images/profile/profile-10.jpg",
             "messages": [
                 {
                     "id": 444,
@@ -480,6 +490,7 @@
     },
     {   "id": 33333,
         "name": "BRO UCHE",
+        "picture": "images/profile/profile-11.jpg",
             "messages": [
                 {
                     "id": 444,
@@ -494,6 +505,7 @@
     },
     {   "id": 33333,
         "name": "FREDDIE",
+        "picture": "images/profile/profile-12.jpg",
             "messages": [
                 {
                     "id": 444,
@@ -508,6 +520,7 @@
     },
     {   "id": 33333,
         "name": "SAMUEL",
+        "picture": "images/profile/profile-13.jpg",
             "messages": [
                 {
                     "id": 444,

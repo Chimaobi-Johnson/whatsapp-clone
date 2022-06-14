@@ -1,11 +1,45 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { ThemeContext } from '../../Utils/themeContext';
 import displayImage from '../../images/whatsapp-image.jpeg';
+import { useDispatch } from 'react-redux';
 
 import styles from './ContactInfo.module.css';
+import { useSelector } from 'react-redux';
+import { toggleContactSidebar } from '../../store/actions/chat';
 
 
 const ContactInfo = props => {
+
+      let sidebarState = useSelector(state => state.app.contactSidebar);
+
+      const dispatch = useDispatch();
+
+    // console.log(sidebarState)
+
+    useEffect(() => {
+        
+        sidebarEffect(sidebarState);
+    }, [sidebarState])
+
+    const sidebarEffect = (currentState) => {
+           
+            let contactInfoDetails = document.getElementById('ContactInfoDetails');
+            let boxContainer = document.getElementById('BoxContainer');
+
+            
+            if(currentState) {
+                
+                boxContainer.style.width = '25%';
+                setTimeout(() => {
+                    contactInfoDetails.style.transform = 'translateY(-1.9%)';
+                }, 1000);
+                
+            } else {
+                boxContainer.style.width = '0%';
+            }
+    }
+
+
 
     const starIcon = (<span data-testid="star" data-icon="star"><svg viewBox="0 0 16 15" height="20" preserveAspectRatio="xMidYMid meet" class=""><path fill="currentColor" d="m8.3 10.2-2.5 1.7c-.3.2-.8-.1-.7-.5L6 8.6c.1-.2 0-.4-.2-.5L3.5 6.3c-.4-.3-.2-.8.2-.8l3-.1c.2 0 .3-.1.4-.3l1-2.8c.1-.4.7-.4.8 0l1 2.8c.1.2.2.3.4.3l3 .1c.4 0 .6.5.3.8l-2.4 1.8c-.1.1-.2.3-.2.5l.9 2.9c.1.4-.3.7-.7.5l-2.5-1.7c-.1-.2-.3-.2-.4-.1z"></path></svg></span>)
     const bellIcon = (<span data-testid="settings-notifications" data-icon="settings-notifications"><svg viewBox="0 0 24 24" height="20" preserveAspectRatio="xMidYMid meet" class=""><path fill="currentColor" d="M12 21.7c.9 0 1.7-.8 1.7-1.7h-3.4c0 .9.8 1.7 1.7 1.7zm5.6-5.2v-4.7c0-2.7-1.8-4.8-4.3-5.4v-.6c0-.7-.6-1.3-1.3-1.3s-1.3.6-1.3 1.3v.6c-2.5.6-4.3 2.7-4.3 5.4v4.7l-1.7 1.7v.9h14.6v-.9l-1.7-1.7z"></path></svg></span>)
@@ -18,8 +52,8 @@ const ContactInfo = props => {
 
     const boxComponent = (icon, title, text, action) => {
         return (
-           <div className={styles.boxContainer} style={{ backgroundColor: theme.background.primary }}>
-               <div className={styles.iconContainer} style={{ color: theme.text.secondary }}>
+           <div className={styles.boxContainer} style={{ backgroundColor: theme.background.primary }} >
+               <div className={styles.iconContainer} style={{ color: theme.text.secondary }} onClick={() => dispatch(toggleContactSidebar())}>
                     {icon}
                </div>
                <div className={styles.textContainer}>
@@ -36,12 +70,23 @@ const ContactInfo = props => {
     }
 
     return (
-        <div className={styles.wrapper} style={{ backgroundColor: theme.background.secondary }}>
+        <div className={styles.wrapper} style={{ backgroundColor: theme.background.secondary }} id='BoxContainer'>
             <div className={styles.header} style={{ backgroundColor: theme.background.secondary }}>
-                <p>Contact Info</p>
+                <div className={styles.closeIcon}>
+                <span data-testid="x" data-icon="x" class="">
+                    <svg viewBox="0 0 24 24" width="24" height="24" class="">
+                        <path fill="currentColor" d="m19.1 17.2-5.3-5.3 5.3-5.3-1.8-1.8-5.3 5.4-5.3-5.3-1.8 1.7 5.3 5.3-5.3 5.3L6.7 19l5.3-5.3 5.3 5.3 1.8-1.8z">
+                        </path>
+                    </svg>
+                </span>
+                </div>
+                <div className={styles.headerText}>
+                    <p>Contact Info</p>
+                </div>
+                
             </div>
 
-            <div className={styles.contentContainer}>
+            <div className={styles.contentContainer} id="ContactInfoDetails">
 
                 <div className={styles.basicInfo} style={{ backgroundColor: theme.background.primary }}>
                     <div className={styles.image}>

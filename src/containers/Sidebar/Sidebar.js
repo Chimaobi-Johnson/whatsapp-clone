@@ -60,6 +60,7 @@ const Sidebar = props => {
                     return <Contact
                         key={Math.floor(Math.random() * 2000)}
                         name={item.name}
+                        dpImage={item.picture}
                         status={getMessageStatus(item.messages)}
                         onClick={() => initChat(item)}
                     />

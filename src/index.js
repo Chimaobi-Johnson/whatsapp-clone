@@ -11,7 +11,7 @@ import Chat from './store/reducers/chatReducer';
 
 
 const rootReducer = combineReducers({
-  currentChat: Chat
+  app: Chat
 });
 
 
