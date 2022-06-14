@@ -2,6 +2,11 @@ import React, { createContext, useState } from 'react';
 
 const themes = {
     light : {
+        dropDown: {
+            background: {
+             primary: '#fff'   
+            }
+        },
         background: {
             primary: '#fff',
             secondary: '#ededed',
