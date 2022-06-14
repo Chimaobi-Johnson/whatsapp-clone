@@ -1,8 +1,9 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { ThemeContext } from '../../../Utils/themeContext';
 import imageURL from '../../../images/whatsapp-image.jpeg';
 
 import styles from './ProfileSettings.module.css';
+import Modal from '../../../components/Modal/Modal';
 
 
 const ProfileSettings = props => {
@@ -55,15 +56,46 @@ const ProfileSettings = props => {
             <div className={styles.iconContainer} style={{ color: theme.profile.text.secondary2 }}>
               {icon}
             </div>
-            <div className={styles.textContainer}>
+            <div className={styles.textContainer} onClick={() => updateTheme(name)}>
                 <p>{name}</p>
             </div>
         </div>     
         )
     }
 
+    const [modal, setModal] = useState(false);
+
+    const updateTheme = () => {
+        setModal(!modal)
+    }
+
     return (
          <div id="profileSettings" className={styles.wrapper} style={{ backgroundColor: theme.profile.background.tertiary }}>
+             <Modal open={modal}>
+                <div className={styles.modalWrapper}>
+                    <h5>Choose theme</h5>
+                    <form className={styles.optionsForm}>
+                        <div className={styles.formItem}>
+                            <label>
+                                Light
+                                <input type="radio" name="theme" value="light" checked />
+                            </label>
+                            <label>
+                                Dark
+                                <input type="radio" name="theme" value="dark" />
+                            </label>
+                            <label>
+                                System default
+                                <input type="radio" name="theme" value="System default" />
+                            </label>
+                        </div>
+                    </form>
+                    <div className={styles.buttonContainer}>
+                        <button>Cancel</button>
+                        <button onClick={() => updateTheme()}>Button</button>
+                    </div>
+                </div>  
+             </Modal>
              <div className={styles.header} style={{ backgroundColor: theme.profile.background.secondary }}>
                 <div className={styles.headerContent}>
                     <div className={styles.backButton}>
