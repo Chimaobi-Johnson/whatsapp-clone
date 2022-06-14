@@ -31,11 +31,12 @@ const ContactInfo = props => {
                 
                 boxContainer.style.width = '25%';
                 setTimeout(() => {
-                    contactInfoDetails.style.transform = 'translateY(-1.9%)';
-                }, 1000);
+                    contactInfoDetails.style.transform = 'translateY(0%)';
+                }, 10);
                 
             } else {
                 boxContainer.style.width = '0%';
+                contactInfoDetails.style.transform = 'translateY(-130%)';
             }
     }
 
@@ -53,7 +54,7 @@ const ContactInfo = props => {
     const boxComponent = (icon, title, text, action) => {
         return (
            <div className={styles.boxContainer} style={{ backgroundColor: theme.background.primary }} >
-               <div className={styles.iconContainer} style={{ color: theme.text.secondary }} onClick={() => dispatch(toggleContactSidebar())}>
+               <div className={styles.iconContainer} style={{ color: theme.text.secondary }}>
                     {icon}
                </div>
                <div className={styles.textContainer}>
@@ -72,7 +73,7 @@ const ContactInfo = props => {
     return (
         <div className={styles.wrapper} style={{ backgroundColor: theme.background.secondary }} id='BoxContainer'>
             <div className={styles.header} style={{ backgroundColor: theme.background.secondary }}>
-                <div className={styles.closeIcon}>
+                <div className={styles.closeIcon} onClick={() => dispatch(toggleContactSidebar())}>
                 <span data-testid="x" data-icon="x" class="">
                     <svg viewBox="0 0 24 24" width="24" height="24" class="">
                         <path fill="currentColor" d="m19.1 17.2-5.3-5.3 5.3-5.3-1.8-1.8-5.3 5.4-5.3-5.3-1.8 1.7 5.3 5.3-5.3 5.3L6.7 19l5.3-5.3 5.3 5.3 1.8-1.8z">
