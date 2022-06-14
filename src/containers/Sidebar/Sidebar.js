@@ -9,6 +9,7 @@ import Profile from '../../components/Profile/Profile'
 
 import styles from './sidebar.module.css';
 import { updateCurrentChat } from '../../store/actions/chat';
+import ProfileSettings from '../../components/Profile/ProfileSettings/ProfileSettings';
 
 
 const Sidebar = props => {
@@ -19,20 +20,23 @@ const Sidebar = props => {
 
     // const [lastMessage, setLastMessage] = useState('');
 
-    const initProfileHandler = () => {
+    const initProfileHandler = (option) => {
+        if(option === 'settings') {
+            document.getElementById('profileSettings').style.left = '-200%';
+        }
         document.getElementById('profile').style.left = '0'
     }
 
+    const initProfileSettingsHandler = () => {
+        document.getElementById('profileSettings').style.left = '0'
+    }
+
+    const removeProfileSettingsHandler = () => {
+        document.getElementById('profileSettings').style.left = '-200%';
+    }
+
     const removeProfileHandler = () => {
-        document.getElementById('profile').style.left = '-100%';
-        // const picture = document.getElementById('picture');
-        // const content = document.getElementById('content');
-        // setTimeout(() => {
-        //     picture.style.display = 'block';
-        // }, 1000);
-        // setTimeout(() => {
-        //     content.style.display = 'block';
-        // }, 1500);
+        document.getElementById('profile').style.left = '-200%';
     }
 
 
@@ -52,7 +56,7 @@ const Sidebar = props => {
         <>
          <div className={styles.wrapper} style={{ backgroundColor: theme.background.tertiary }}>
             <header className={styles.header}>
-                <SidebarHeader initProfileHandler={initProfileHandler} />
+                <SidebarHeader initProfileHandler={initProfileHandler} initProfileSettingsHandler={initProfileSettingsHandler} />
                 <Searchbar />
             </header>
             <div className={styles.contactContainer}>
@@ -65,9 +69,16 @@ const Sidebar = props => {
                         onClick={() => initChat(item)}
                     />
                 })}
-            </div>
+            </div>  
+            <Profile removeProfileHandler={removeProfileHandler} />
+            <ProfileSettings 
+                initProfileHandler={initProfileHandler} 
+                removeProfileSettingsHandler={removeProfileSettingsHandler} 
+            />
         </div>
-          <Profile removeProfileHandler={removeProfileHandler} />
+        
+        
+          
         </>
     )
 }

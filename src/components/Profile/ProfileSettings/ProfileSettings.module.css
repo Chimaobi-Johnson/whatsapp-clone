@@ -42,22 +42,21 @@
     cursor: pointer;
 }
 
-/* .pictureContainer {
-    display: none;
+.profileInfo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 16px 18px;
 }
 
-.content {
-    display: none;
-} */
+.profileInfo:hover {
+    cursor: pointer;
+    background-color: #cbcbcb30;
+}
 
 .imageWrapper {
-    width: 200px;
-    height: 200px;
-    margin-top: 28px;
-    margin-bottom: 28px;
-    margin-right: auto;
-    margin-left: auto;
-    position: relative;
+    width: 80px;
+    height: 80px;
 }
 
 .imageWrapper img {
@@ -66,50 +65,31 @@
     border-radius: 100%;
 }
 
-.imageWrapper:hover > .imageOverlay {
-    display: block;
+.profileInfoContent {
+    margin-left: 20px;
+    margin-bottom: 15px;
 }
 
-.name {
-    padding: 14px 30px 10px;
+.profileInfoContent p {
+    margin-bottom: 2px;
+    font-size: 1.2rem;
 }
 
-.title {
-    font-size: 14px;
-}
-
-.userName {
+.linkItemWrapper {
     display: flex;
+    justify-content: flex-start;
     align-items: center;
-    justify-content: space-between;
+    padding: 4px 26px;
 }
 
-.subText {
-    padding: 4px 20px 28px 30px;
-    font-size: .9rem;
+.textContainer {
+    margin-left: 24px;
+    flex: 1;
+    border-bottom: 1px solid #e1e1e1;
 }
 
-.imageOverlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: #6c7d8ad1;
-    border-radius: 100%;
+.linkItemWrapper:hover {
     cursor: pointer;
-    display: none;
+    background-color: #cbcbcb30;
 }
 
-.overlayContent {
-    font-size: 9px;
-    text-transform: uppercase;
-    position: absolute;
-    top: 61%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: #fff;
-}
-
-.overlayContent h2 {
-    font-weight: normal;
-}

@@ -43,7 +43,7 @@ const SidebarHeader = props => {
                         <ul>
                             <li>New group</li>
                             <li>Starred messages</li>
-                            <li>Settings</li>
+                            <li onClick={() => props.initProfileSettingsHandler()}>Settings</li>
                             <li>Log out</li>
                         </ul>
                     </div>
