@@ -2,13 +2,23 @@ import React, { createContext, useState } from 'react';
 
 const themes = {
     light : {
+        button: {
+            background: {
+                primary: '#ffffff',
+                secondary: '#008069'
+            },
+            text: {
+                primary: '#ffffff',
+                secondary: '#008069'
+            }
+        },
         dropDown: {
             background: {
-             primary: '#fff'   
+             primary: '#ffffff'   
             }
         },
         background: {
-            primary: '#fff',
+            primary: '#ffffff',
             secondary: '#ededed',
             tertiary: '#f6f6f6',
             landing: '#f8f9fa',
@@ -18,13 +28,13 @@ const themes = {
             background: {
                 primary: '#f0f2f5',
                 secondary: '#008069',
-                tertiary: '#fff'
+                tertiary: '#ffffff'
             },
             text: {
                 primary: '#008069',
                 secondary: '#3b4a54',
                 secondary2: '#8696a0',
-                tertiary: '#fff'
+                tertiary: '#ffffff'
             }
         },
         chat: {
@@ -33,7 +43,7 @@ const themes = {
                 secondary: '#dcf8c6'
             },
             text: {
-                primary: '#000'
+                primary: '#000000'
             }
         },
         text: {
@@ -45,7 +55,7 @@ const themes = {
         }
     },
     dark: {
-        headerColor: '#000'
+        headerColor: '#000000'
     }
 }
 

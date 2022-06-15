@@ -15,18 +15,20 @@ const Modal = props => {
             modal.style.display = 'block';
             setTimeout(() => {
                 modalContent.style.transform = 'scale(1)';
+                modalContent.style.transform = 'translate(-50%, -50%)';
             }, 100)
         }
         const closeModal = () => {
             setTimeout(() => {
-                        modal.style.display = 'none';
+                modal.style.display = 'none';
             }, 100)
             modalContent.style.transform = 'scale(0)';
+            modalContent.style.transform = 'translate(-50%, -50%)';
         }
 
 
         if(open) {
-            openModal()  
+            openModal() 
         } else {
             closeModal()
         }
@@ -35,7 +37,7 @@ const Modal = props => {
     }, [open])
 
     return (
-        <div id="customModal" className={styles.wrapper} style={{ backgroundColor: theme.background.primary }}>
+        <div id="customModal" className={styles.wrapper} style={{ backgroundColor: `${theme.background.primary}de` }}>
             <div id="modalContent" className={styles.content} style={{ backgroundColor: theme.background.primary }}>
                 {props.children}
             </div>

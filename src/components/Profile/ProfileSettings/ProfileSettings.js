@@ -73,26 +73,26 @@ const ProfileSettings = props => {
          <div id="profileSettings" className={styles.wrapper} style={{ backgroundColor: theme.profile.background.tertiary }}>
              <Modal open={modal}>
                 <div className={styles.modalWrapper}>
-                    <h5>Choose theme</h5>
+                    <p>Choose theme</p>
                     <form className={styles.optionsForm}>
                         <div className={styles.formItem}>
                             <label>
-                                Light
                                 <input type="radio" name="theme" value="light" checked />
+                                Light
                             </label>
                             <label>
-                                Dark
                                 <input type="radio" name="theme" value="dark" />
+                                Dark
                             </label>
                             <label>
-                                System default
                                 <input type="radio" name="theme" value="System default" />
+                                System default
                             </label>
                         </div>
                     </form>
                     <div className={styles.buttonContainer}>
-                        <button>Cancel</button>
-                        <button onClick={() => updateTheme()}>Button</button>
+                        <button className={styles.modalButton} style={{ color: theme.button.text.secondary, backgroundColor: theme.button.background.primary }}>Cancel</button>
+                        <button className={styles.modalButton} style={{ color: theme.button.text.primary, backgroundColor: theme.button.background.secondary, marginLeft: '5px' }} onClick={() => updateTheme()}>Ok</button>
                     </div>
                 </div>  
              </Modal>
