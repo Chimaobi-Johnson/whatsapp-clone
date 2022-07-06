@@ -1,4 +1,4 @@
-import { TOGGLE_CONTACT_SIDEBAR, UPDATE_CURRENT_CHAT } from './action-type';
+import { CHANGE_CURRENT_THEME, TOGGLE_CONTACT_SIDEBAR, UPDATE_CURRENT_CHAT } from './action-type';
 
 import data from '../../data/data.json';
 
@@ -34,3 +34,11 @@ export const toggleContactSidebar = () => dispatch => {
         type: TOGGLE_CONTACT_SIDEBAR,
     })
 }
+
+export const changeCurrentTheme = (theme) => dispatch => {
+    dispatch({
+        type: CHANGE_CURRENT_THEME,
+        payload: theme
+    })
+}
+

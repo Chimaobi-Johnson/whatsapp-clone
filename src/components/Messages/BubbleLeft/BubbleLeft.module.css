@@ -22,10 +22,36 @@
     border-bottom: 15px solid transparent;
     left: -7px;
     top: 0px;
-  }
+}
+
+.wrapperDark {
+    font-size: 14px;
+    padding: 6px 7px 8px 9px;
+    display: block;
+    /* float: left; */
+    width: fit-content;
+    max-width: 70%;
+    position: relative;
+    box-shadow: 0 1px .5px #15151514;
+    border-radius: 7.5px;
+    margin-bottom: 2px;  
+}
+
+.wrapperDark::before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 15px solid transparent;
+    /* border-right: 15px solid #00bfb6; */
+    border-top: 15px solid #202c33;
+    border-bottom: 15px solid transparent;
+    left: -7px;
+    top: 0px;
+}
 
 .time {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     color: #c4c4c4;
     position: absolute;
     bottom: 3px;

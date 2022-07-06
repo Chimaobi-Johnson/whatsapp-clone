@@ -49,7 +49,7 @@ const InputContainer = props => {
             </div>
             <div className={styles.inputContainer}>
                 <div className={styles.inputWrapper}>
-                    <input type="text" placeholder="Type a message" onChange={(e) => changeChatHandler(e)} className={styles.input} />
+                    <input type="text" placeholder="Type a message" onChange={(e) => changeChatHandler(e)} style={{ backgroundColor: theme.input.background2 }} className={styles.input} />
                 </div>
             </div>
             <div className={styles.microphoneContainer}>

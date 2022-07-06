@@ -23,6 +23,25 @@
     background: #c5c4c1; 
 }
 
+.chatContentBoxDark {
+    padding: 0 4rem;
+    overflow-y: auto;
+}
+
+.chatContentBoxDark::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+.chatContentBoxDark::-webkit-scrollbar-track {
+    background: none;
+}
+
+.chatContentBoxDark::-webkit-scrollbar-thumb {
+    background: #384045; 
+}
+
+
+
 .leftChat {
     display: flex;
     flex-direction: column;

@@ -115,4 +115,9 @@
     border: 1px solid #00000014;
     border-radius: 3px;
     text-transform: uppercase;
+    transition: all .3s;
+}
+
+.modalButton:hover {
+    box-shadow: 2px 5px 4px #eaeaea;
 }

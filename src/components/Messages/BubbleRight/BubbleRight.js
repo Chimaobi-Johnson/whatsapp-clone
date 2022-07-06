@@ -11,8 +11,18 @@ const BubbleRight = props => {
 
     const { theme } = useContext(ThemeContext);
 
+    const currentTheme = 'dark';
+    
+    let wrapperStyles;
+    if(currentTheme === 'dark') {
+        wrapperStyles = styles.wrapperDark
+    } else {
+        wrapperStyles = styles.wrapper
+    }
+
+
     return (
-        <div className={styles.wrapper} style={{ backgroundColor: theme.chat.background.secondary }}>
+        <div className={wrapperStyles} style={{ backgroundColor: theme.chat.background.secondary }}>
                 <div className={styles.textWrapper}>
                     <span>{text}</span>
                 </div>

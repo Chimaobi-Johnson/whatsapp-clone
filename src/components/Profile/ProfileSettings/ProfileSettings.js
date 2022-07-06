@@ -4,6 +4,8 @@ import imageURL from '../../../images/whatsapp-image.jpeg';
 
 import styles from './ProfileSettings.module.css';
 import Modal from '../../../components/Modal/Modal';
+import { changeCurrentTheme } from '../../../store/actions/chat';
+import { useDispatch } from 'react-redux';
 
 
 const ProfileSettings = props => {
@@ -48,7 +50,7 @@ const ProfileSettings = props => {
         },
 ]
 
-    const { theme } = useContext(ThemeContext);
+    const { theme, toggleTheme } = useContext(ThemeContext);
 
     const linkItemComponent = (icon, name) => {
         return (
@@ -56,7 +58,7 @@ const ProfileSettings = props => {
             <div className={styles.iconContainer} style={{ color: theme.profile.text.secondary2 }}>
               {icon}
             </div>
-            <div className={styles.textContainer} onClick={() => updateTheme(name)}>
+            <div className={styles.textContainer} onClick={() => openLink(name)}>
                 <p>{name}</p>
             </div>
         </div>     
@@ -65,9 +67,41 @@ const ProfileSettings = props => {
 
     const [modal, setModal] = useState(false);
 
-    const updateTheme = () => {
-        setModal(!modal)
+    const openLink = (name) => {
+        switch (name) {
+            case 'Theme':
+                setModal(true)
+                break;
+        
+            default:
+                break;
+        }
     }
+
+    const dispatch = useDispatch();
+
+    const [ currentTheme, setCurrentTheme ] = useState('light');
+
+    const toggleThemeHandler = () => {
+        toggleTheme(currentTheme);
+        setModal(false)
+    }
+
+    const closeModal = () => {
+        setModal(false)
+    }
+
+    const updateTheme = () => {
+        setModal(false)
+    }
+
+ 
+
+    const changeRadioBtnHandler = (e) => {
+        setCurrentTheme(e.target.value);
+    }
+// onClick={() => dispatch(changeCurrentTheme(currentTheme))} 
+
 
     return (
          <div id="profileSettings" className={styles.wrapper} style={{ backgroundColor: theme.profile.background.tertiary }}>
@@ -77,22 +111,22 @@ const ProfileSettings = props => {
                     <form className={styles.optionsForm}>
                         <div className={styles.formItem}>
                             <label>
-                                <input type="radio" name="theme" value="light" checked />
+                                <input type="radio" name="theme" onChange={(event) => changeRadioBtnHandler(event)} value="light" />
                                 Light
                             </label>
                             <label>
-                                <input type="radio" name="theme" value="dark" />
+                                <input type="radio" name="theme" onChange={(event) => changeRadioBtnHandler(event)} value="dark" />
                                 Dark
                             </label>
                             <label>
-                                <input type="radio" name="theme" value="System default" />
+                                <input type="radio" name="theme" onChange={(event) => changeRadioBtnHandler(event)} value="System default" />
                                 System default
                             </label>
                         </div>
                     </form>
                     <div className={styles.buttonContainer}>
-                        <button className={styles.modalButton} style={{ color: theme.button.text.secondary, backgroundColor: theme.button.background.primary }}>Cancel</button>
-                        <button className={styles.modalButton} style={{ color: theme.button.text.primary, backgroundColor: theme.button.background.secondary, marginLeft: '5px' }} onClick={() => updateTheme()}>Ok</button>
+                        <button onClick={() => closeModal()} className={styles.modalButton} style={{ color: theme.button.text.secondary, backgroundColor: theme.button.background.primary }}>Cancel</button>
+                        <button onClick={toggleThemeHandler} className={styles.modalButton} style={{ color: theme.button.text.primary, backgroundColor: theme.button.background.secondary, marginLeft: '5px' }}>Ok</button>
                     </div>
                 </div>  
              </Modal>
