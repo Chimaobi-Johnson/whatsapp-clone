@@ -10,11 +10,9 @@ const BubbleRight = props => {
     const { time, text } = props;
 
     const { theme } = useContext(ThemeContext);
-
-    const currentTheme = 'dark';
     
     let wrapperStyles;
-    if(currentTheme === 'dark') {
+    if(theme.styling === 'dark') {
         wrapperStyles = styles.wrapperDark
     } else {
         wrapperStyles = styles.wrapper

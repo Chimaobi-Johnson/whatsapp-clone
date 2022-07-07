@@ -100,7 +100,6 @@ const ProfileSettings = props => {
     const changeRadioBtnHandler = (e) => {
         setCurrentTheme(e.target.value);
     }
-// onClick={() => dispatch(changeCurrentTheme(currentTheme))} 
 
 
     return (

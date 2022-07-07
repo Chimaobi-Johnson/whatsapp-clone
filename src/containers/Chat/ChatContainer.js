@@ -1,14 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import ChatBox from '../../components/Chat/ChatBox/ChatBox';
-import bgImage from '../../images/background/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png';
-import bgImageDark from '../../images/background/default-wallpaper-dark.png';
+import { ThemeContext } from '../../Utils/themeContext';
 
 import styles from './chatContainer.module.css';
 
 const ChatContainer = props => {
 
+    const { theme } = useContext(ThemeContext)
+
     return (
-        <div className={styles.wrapper} style={{ backgroundImage: `url(${bgImageDark})`}}>
+        <div className={styles.wrapper} style={{ backgroundImage: `url(${theme.backgroundImage})`}}>
             {/* <Landing /> */}
             <ChatBox />
         </div>

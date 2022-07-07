@@ -4,6 +4,8 @@ import { useSelector } from 'react-redux';
 
 const themes = {
     light : {
+        backgroundImage: 'images/background/default-wallpaper-light.png',
+        styling: 'light',
         button: {
             background: {
                 primary: '#ffffff',
@@ -60,6 +62,8 @@ const themes = {
         }
     },
     dark: {
+        backgroundImage: 'images/background/default-wallpaper-dark.png',
+        styling: 'dark',
         button: {
             background: {
                 primary: '#000000',
