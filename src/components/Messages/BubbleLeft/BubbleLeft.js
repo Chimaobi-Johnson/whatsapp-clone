@@ -19,7 +19,7 @@ const BubbleLeft = props => {
 
     return (
         <div className={wrapperStyles} style={{ backgroundColor: theme.chat.background.primary }}>
-                <div className={styles.textWrapper}>
+                <div className={styles.textWrapper} style={{ color: theme.text.primary }}>
                     <span>{text}</span>
                 </div>
                 <span className={styles.time}>{time}</span>

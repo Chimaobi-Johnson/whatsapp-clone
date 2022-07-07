@@ -58,7 +58,7 @@ const ProfileSettings = props => {
             <div className={styles.iconContainer} style={{ color: theme.profile.text.secondary2 }}>
               {icon}
             </div>
-            <div className={styles.textContainer} onClick={() => openLink(name)}>
+            <div style={{ color: theme.profile.text.primary, borderBottom: `1px solid ${theme.text.tertiaryLight}` }} className={styles.textContainer} onClick={() => openLink(name)}>
                 <p>{name}</p>
             </div>
         </div>     
@@ -101,9 +101,17 @@ const ProfileSettings = props => {
         setCurrentTheme(e.target.value);
     }
 
+    let modalButtonStyles;
+    if(theme.styling === 'dark') {
+        modalButtonStyles = styles.modalButtonDark
+    } else {
+        modalButtonStyles = styles.modalButton
+    }
+
+
 
     return (
-         <div id="profileSettings" className={styles.wrapper} style={{ backgroundColor: theme.profile.background.tertiary }}>
+         <div id="profileSettings" className={styles.wrapper} style={{ backgroundColor: theme.background.primary }}>
              <Modal open={modal}>
                 <div className={styles.modalWrapper}>
                     <p>Choose theme</p>
@@ -124,8 +132,8 @@ const ProfileSettings = props => {
                         </div>
                     </form>
                     <div className={styles.buttonContainer}>
-                        <button onClick={() => closeModal()} className={styles.modalButton} style={{ color: theme.button.text.secondary, backgroundColor: theme.button.background.primary }}>Cancel</button>
-                        <button onClick={toggleThemeHandler} className={styles.modalButton} style={{ color: theme.button.text.primary, backgroundColor: theme.button.background.secondary, marginLeft: '5px' }}>Ok</button>
+                        <button onClick={() => closeModal()} className={modalButtonStyles} style={{ color: theme.button.text.secondary, background: 'transparent' }}>Cancel</button>
+                        <button onClick={toggleThemeHandler} className={modalButtonStyles} style={{ color: theme.button.text.primary, backgroundColor: theme.button.background.secondary, marginLeft: '5px' }}>Ok</button>
                     </div>
                 </div>  
              </Modal>
@@ -153,7 +161,7 @@ const ProfileSettings = props => {
                     </div>
                 </div>
                 <div className={styles.profileInfoContent}>
-                        <p>Chimaobi</p>
+                        <p style={{ color: theme.profile.text.primary }}>Chimaobi</p>
                         <span style={{ color: theme.profile.text.secondary }}>Busy</span>
                 </div>
             </div>

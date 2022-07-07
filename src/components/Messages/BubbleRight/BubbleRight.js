@@ -21,7 +21,7 @@ const BubbleRight = props => {
 
     return (
         <div className={wrapperStyles} style={{ backgroundColor: theme.chat.background.secondary }}>
-                <div className={styles.textWrapper}>
+                <div className={styles.textWrapper} style={{ color: theme.text.primary }}>
                     <span>{text}</span>
                 </div>
                 <div className={styles.time}><span>{time}</span><Check status="seen" /></div>

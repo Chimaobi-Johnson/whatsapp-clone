@@ -8,6 +8,14 @@ const Modal = props => {
 
     const { theme } = useContext(ThemeContext);
 
+    let contentStyles;
+    if(theme.styling === 'dark') {
+        contentStyles = styles.contentDark
+    } else {
+        contentStyles = styles.content
+    }
+
+
     useEffect(() => {
         const modal = document.getElementById('customModal');
         const modalContent = document.getElementById('modalContent');
@@ -38,7 +46,7 @@ const Modal = props => {
 
     return (
         <div id="customModal" className={styles.wrapper} style={{ backgroundColor: `${theme.background.primary}de` }}>
-            <div id="modalContent" className={styles.content} style={{ backgroundColor: theme.background.primary }}>
+            <div id="modalContent" className={contentStyles} style={{ color: theme.text.primary, backgroundColor: theme.background.tertiary }}>
                 {props.children}
             </div>
         </div>

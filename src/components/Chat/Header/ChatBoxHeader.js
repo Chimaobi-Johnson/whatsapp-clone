@@ -14,7 +14,7 @@ const ChatBoxHeader = props => {
     
     const dynamicStyles = { 
         backgroundColor: theme.background.secondary, 
-        borderLeft: '1px solid #dadada' 
+        borderLeft: `1px solid ${theme.text.tertiaryLight2}`
     }
 
     const dispatch = useDispatch();
@@ -29,11 +29,11 @@ const ChatBoxHeader = props => {
                     </div>
                 </div>
                 <div className={styles.textContainer}>
-                    <h2>{name}</h2>
-                    <p>Online</p>
+                    <h2 style={{ color: theme.text.primary }}>{name}</h2>
+                    <p style={{ color: theme.text.tertiary }}>Online</p>
                 </div>
             </div>
-            <div className={styles.headerRight}>
+            <div className={styles.headerRight} style={{ color: theme.text.tertiary }}>
                 <div className={styles.searchContainer}>
                     <span>
                         <svg viewBox="0 0 24 24" width="24" height="24" class="">

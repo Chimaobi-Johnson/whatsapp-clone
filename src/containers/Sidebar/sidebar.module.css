@@ -20,7 +20,8 @@
   }
   
 .contactContainer::-webkit-scrollbar-track {
-    background: #fff;
+    /* background: #fff; */
+    background: transparent;
 }
 
 .contactContainer::-webkit-scrollbar-thumb {
