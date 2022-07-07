@@ -1,6 +1,4 @@
 import React, { createContext, useState } from 'react';
-import { useSelector } from 'react-redux';
-
 
 const themes = {
     light : {
@@ -143,11 +141,10 @@ const ThemeContext = createContext(themes); // default theme
 
 const ThemeProvider = ({ children }) => {
 
-const currentTheme = useSelector(data => data.app.currentTheme);
+// const currentTheme = useSelector(data => data.app.currentTheme);
 
 const [theme, setCurrentTheme] = useState(themes.light);
 
-console.log(theme)
 
 // if(currentTheme === 'dark') {
 //     setCurrentTheme(themes.dark)
