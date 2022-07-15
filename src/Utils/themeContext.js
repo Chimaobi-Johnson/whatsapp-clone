@@ -120,7 +120,7 @@ const themes = {
         },
         text: {
             primary: '#e9edef',
-            secondary: '#667781',
+            secondary: '#aebac1',
             tertiary: '#9e9e9e',
             tertiaryLight: '#1e282f',
             tertiaryLight2: '#43474a'

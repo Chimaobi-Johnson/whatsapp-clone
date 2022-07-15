@@ -25,7 +25,6 @@
     display: flex;
     flex-basis: 50%;
     justify-content: flex-end;
-    color: aqua;
 }
 
 .statusButton {
