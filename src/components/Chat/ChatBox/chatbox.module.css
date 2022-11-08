@@ -9,6 +9,10 @@
 .chatContentBox {
     padding: 0 4rem;
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-end;
 }
 
 .chatContentBox::-webkit-scrollbar {
